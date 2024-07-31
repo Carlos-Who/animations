@@ -4,42 +4,34 @@ import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
 import { gsap } from "gsap";
 
-let flag = false;
-let cardTimeLine = gsap.timeline({paused: true});
-cardTimeLine.to(".faces", {rotationY:180, duration:1, ease:"power1.inOut"})
+let active;
+let expanders = gsap.utils.toArray(".expander");
 
-const cardFront =  document.querySelector('.front');
-const cardBack =  document.querySelector('.back');
+expanders.forEach(function(expander, index){
+    let close = expander.querySelector(".close")
+    let animation = gsap.timeline({paused:true})
+    animation.to(expander, {width:250, duration:0.4})
+        .from(close, {opacity:0, scale:0.4, duration:0.1, x:"-=10"}, "-=0.1")
+    expander.animation = animation // assign the animation to the current element
 
-cardFront.addEventListener("click", () => {
-    console.log("Click front card")
-    cardTimeLine.play();
-});
+    expander.addEventListener("click", function(){
 
-cardBack.addEventListener("click", () => {
-    console.log("Click back card")
-    cardTimeLine.reverse();
-});
+        if(active){
+            active.animation.reverse() // reverse (close) active element's animation
+        }
 
-document.querySelector('#app').innerHTML = `
-<!--
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-  -->
+        expander.animation.play() // play (open) the clicked element's animation
+        active = expander
+    })
 
-`
+    close.addEventListener("click", function(event){
+        event.stopPropagation()
+        expander.animation.reverse()
+    })
 
-setupCounter(document.querySelector('#counter'))
+    console.log(expander)
+
+})
+
+gsap.set(".expander", {backgroundColor:gsap.utils.wrap(["#f5ce5b", "#c570b6", "#78d6e0"])})
+
