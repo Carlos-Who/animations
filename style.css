@@ -24,8 +24,6 @@ img {
   display: block;
 }
 
-
-
 button {
   padding: 0.5rem 1rem;
   margin-bottom: 3rem;
@@ -37,346 +35,10 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 40vh;
+  height: 50vh;
   color: #7f8c8d;
-  /*background-color: #cbd5d5;*/
-  /*background-color: rgba(203, 213, 213, 0.11);*/
-  background-color: transparent;
+  background-color: #3d20b8;
 }
-
-.spacer-sm {
-  position: relative; /* Necesario para posicionar el pseudo-elemento */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 32rem;
-  color: #5e93ff;
-  z-index: 1;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("./public/patterns/Seamless-folk-art-vector-pattern-with-birds-and-flowers,-Scandinavian-navy-blue-repetitive-floral-design-921594118_3900x3900 [Converted].svg");
-    background-size: 13rem;
-    opacity: 0.1;
-    z-index: -1;
-  }
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to bottom, transparent 80%, white);
-    z-index: 0;
-  }
-}
-
-
-
-.expandable-card__container {
-  height: 40rem;
-  width: 100%;
-  background: #d8d5d5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  padding: 1em 0;
-}
-
-
-.expandable-card {
-  position: relative;
-  isolation: isolate;
-  /*min-width: 8rem;*/
-  width: 11rem;
-  height: 33rem;
-
-  border-radius: 8px;
-  background: white;
-  margin-left: 20px;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: flex-end;
-  align-content: flex-end;
-
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-}
-
-.card--one {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background-image: url("./public/expandable-cards/exp-card-culinary.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.card--two {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background-image: url("./public/expandable-cards/exp-card-cultural.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-.card--three {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-  background-image: url("./public/expandable-cards/exp-card-wellness.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-}
-
-
-
-.expandable-card-cover {
-  user-select: none;
-  cursor: pointer;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-
-  z-index: 9999999999910;
-}
-
-.cover--culinary {
-  background-color: deeppink;
-}
-
-.cover--cultural {
-  background-color: springgreen;
-}
-
-.cover--wellness {
-  background-color: deepskyblue;
-}
-
-
-.expandable-card-cover-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-
-.expandable-card-content__container {
-  position: relative;
-  z-index: 20;
-  width: 70%;
-  height: 100%;
-  /*padding: 0 1em 0 6em;*/
-  overflow-y: auto;
-  padding: 3em  1.5em 1em 2.5em;
-  /*background-color: white;*/
-  background: rgb(255, 255, 255);
-  /*background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,*/
-  /*                                    rgb(255 255 255 / 85%) 1%,*/
-  /*                                    rgb(255 255 255) 2.5%);*/
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,
-  rgb(255 255 255 / 96%) 2%,
-  rgb(255 255 255) 2.5%);
-}
-
-
-.expandable-card-title {
-  font-family: "Source Code Pro", Serif;
-  font-size: 1.8rem;
-}
-
-.expandable-card-description {
-  font-family: Inter, sans-serif;
-  font-size: .96rem;
-  font-weight: 300;
-  color: #333333;
-  margin-bottom: 1rem;
-}
-
-.expandable-card__list {
-  /*margin-bottom: 1rem;*/
-}
-
-.expandable-card__list-item {
-
-  padding: 0 .5em;
-  &::marker {
-    color: #cfc4b4;
-  }
-  &:nth-child(even) {
-    /*background-color: #f9f9f9;*/
-    background-color: #FBFBFB;
-    border-radius: .2rem;
-  }
-  &:not(:last-child) {
-    margin-bottom: .2rem;
-  }
-}
-
-.expandable-card__list-item-label {
-  font-family: Inter, sans-serif;
-  font-size: .93rem;
-  font-weight: 300;
-  color: #333333;
-}
-
-.soft {
-  font-family: Inter, sans-serif;
-  font-size: .8rem;
-  font-weight: 300;
-  color: #333333;
-}
-
-
-.close {
-  user-select: none;
-  cursor: pointer;
-  position: absolute;
-  top: 2%;
-  right: 1.5%;
-  z-index: 9999999;
-
-  color: #777673;
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 1.3rem;
-  line-height: 40px;
-
-  border-radius: 20px;
-  height: 40px;
-  width: 40px;
-  transition: background-color .3s ease;
-  &:hover {
-    background-color: #f7f7f7;
-  }
-}
-
-
-
-swiper-container {
-  /*background-color: salmon;*/
-}
-
-swiper-slide {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-
-}
-
-.slide-content__container {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding: 1em 0 2em 0;
-}
-
-
-.slide-content-details {
-  width: 90vw;
-  max-width: 32rem;
-  margin: 0 auto;
-}
-
-.slide__card__list {
-  padding-left: 1em;
-}
-
-.slide__list-item {
-
-  &:nth-child(even) {
-    background-color: #FBFBFB;
-    border-radius: .2rem;
-  }
-}
-
-
-.slide-thumbnail__container {
-  position: relative;
-  height: 15rem;
-  background-image: url("./public/card-exp-slide-1.jpg");
-  background-position: center;
-}
-
-.slide-thumbnail-image {
-  display: block;
-  max-width: 100%;
-  object-fit: cover;
-}
-
-
-
-/* NUEVA SECCION (START) */
-
-
-/* This will handle the height */
-.hotels-gallery__container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 20rem;
-  /*background-color: royalblue;*/
-  margin-bottom: 2rem;
-}
-
-
-.hotels-gallery-content {
-  flex-grow: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: deepskyblue;
-}
-
-.ornament--top {
-  background-image: url("./public/patterns/mexican-pattern-separator.svg");
-}
-
-.ornament--bottom {
-  background-image: url("./public/patterns/mexican-pattern-separator.svg");
-}
-
-.ornament__container {
-  width: 100%;
-  height: 3rem;
-  background-repeat: repeat;
-  background-size: contain;
-  background-blend-mode: lighten;
-  filter: opacity(75%);
-}
-
-/* NUEVA SECCION (END) */
-
-
 
 
 .heading-container {
@@ -422,112 +84,128 @@ swiper-slide {
   margin-bottom: 1rem;
 }
 
-
 /* NEW Slider scroll */
 .mim-bold-paragraph {
   font-weight: 500;
 }
 
-.activities-gallery {
-  /* This is the diagonal */
-  position: relative;
-  /*margin: 1rem 0;*/
-  width: 100%;
-  height: fit-content;
-  /*min-height: 100vh;*/
-  /*padding: 1rem 0;*/
-  transform: skewY(1.5deg);
-  background-color: #f1f1f1;
-  /*background-color: #d32222;*/
-  /*overflow: hidden;*/
+
+
+/*// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //*/
+/*//                NEW SECTION                //*/
+/*// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //*/
+
+.wrapper {
+  /*max-width: 90vw;*/
+}
+
+.gallery h1 {
+  font-size:clamp(2em, 4vw, 6em);
+}
+
+.gallery p {
+  font-size:clamp(1.4em, 2.5vw, 3.5em);
+  line-height:1.4;
+}
+
+
+.gallery {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /*justify-content: space-between;*/
+  max-width: 90vw;
+  margin: 0 auto;
+  background-color: seagreen;
+  /* outline:1px solid red; */
 }
 
+.left {
+  width:50%;
+  background-color: slateblue;
+}
 
-.activities-gallery-content__container {
-  /* This is the horizontal container */
+.right {
+  height:100vh;
+  /* outline:1px solid purple; */
+  width:50%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background-color: sandybrown;
+}
+
+.desktopContent {
+  margin:auto;
   width: 100%;
-  /*min-height: 100vh;*/
-  overflow: hidden;
-  transform: skewY(-1.5deg);
-  /*background-color: salmon;*/
+}
+
+.desktopContentSection {
+  width: 100%;
+  min-height: 100vh;
+  /* outline:1px solid green; */
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
 }
 
 
-.activities-content {
+.desktopPhotos {
+  width:70%;
+  /*height:40vw;*/
+  aspect-ratio: 16 / 13;
+  border-radius:20px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:4px 4px 4px rgba(0, 0, 0, 0.4);
 
-  width: 80%;
-  max-width: 47.3rem;
-  padding-top: 6rem;
-  margin-bottom: 4rem;
-  margin-left: 4rem;
-  /*background-color: royalblue;*/
+}
 
-  .mim-page-title--secondary {
-    text-align: left;
+.desktopPhoto {
+  position:absolute;
+  width:100%;
+  height:100%;
+
+  img {
+    max-width:100%;
+    height: 100%;
+    object-fit: cover;
   }
-
-  .mim-page-paragraph--primary {
-    text-align: left;
-  }
-
 }
 
 
-.box-image {
-  /*width: 33rem;*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: clamp(20rem, 30vw, 33rem);
-  aspect-ratio: 16 / 11;
-  /*height: 28rem;*/
+
+
+.red {
+  background: crimson;
 }
 
-.box1 {
-  background-color: #5e93ff;
+.green {
+  background:MediumSeaGreen;
 }
 
-.box2 {
-  background-color: tomato;
+.blue {
+  background:dodgerblue;
 }
 
-.box3 {
-  background-color: springgreen;
-}
-
-.box4 {
-  background-color: purple;
-}
-
-.box5 {
-  background-color: yellow;
-}
-
-.box6 {
-  background-color: orangered;
-}
-
-.box7 {
-  background-color: dodgerblue;
+.pink{
+  background:deepPink;
 }
 
 
-.activities-scroll-slider {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, auto);
-  grid-auto-flow: column;
-  gap: .4rem;
-  /*background-color: crimson;*/
-
-  /*display: flex;*/
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  /*flex-direction: row;*/
-  /*overflow: hidden;*/
+/* small screen / mobile layout */
+.mobileContent {
+  display:none;
+  width:80vw;
 }
+
+.mobilePhoto {
+  width:80vw;
+  height:80vw;
+  margin-top:5em;
+  border-radius:6vw;
+}
+
+
+
 
 
 
@@ -552,6 +230,29 @@ swiper-slide {
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
+
+
+}
+
+/*Small devices (landscape phones, 599px and up)*/
+@media screen and (max-width: 599px) {
+  .left {
+    display:none;
+  }
+
+  .right {
+    height:auto;
+    width:100%;
+    align-items:center;
+  }
+
+  .desktopPhotos {
+    display:none;
+  }
+
+  .mobileContent {
+    display:block;
+  }
 
 
 }
