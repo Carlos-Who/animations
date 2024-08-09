@@ -109,10 +109,10 @@ button {
   /*clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);*/
 
   /*transform: skewX(-15deg);*/
-  mask-image: url('./public/mask-skew.webp');
+  mask-image: url('./public/mask-mayor.svg');
   mask-size: cover;
-  mask-size: 100% 100%;
-  mask-border-slice: 15% 0;
+  /*mask-size: 100% 100%;*/
+  /*mask-border-slice: 15% 0;*/
   mask-repeat: no-repeat;
 
   }
