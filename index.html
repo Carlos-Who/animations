@@ -5,93 +5,173 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
 <!--    <div id="app"></div>-->
 
+<!-- Festival of Flavor -->
 
-<div class="spacer">E M P T Y</div>
-
-
-
-
-
-<!--<section class="wrapper">-->
-  <div class="gallery">
-    <div class="left">
-      <div class="desktopContent">
-        <div class="desktopContentSection">
-          <h1>Red</h1>
-          <p>Red is a color often associated with strong emotions such as passion, love, and anger. It's a bold and attention-grabbing color that can evoke feelings of excitement, warmth, and energy.</p>
+<section class="ff-hero">
+    <div class="ff-hero__swiper swiper">
+        <div class="ff-hero__swiper-wrapper swiper-wrapper">
+            <div class="ff-hero__slide swiper-slide">
+                <img src="/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-1.webp"
+                     srcset="/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-mob-1.webp 900w,
+                         /festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-1.webp 2560w"
+                     sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"
+                     class="ff-hero__slide-image"
+                     alt="">
+            </div>
+            <div class="ff-hero__slide swiper-slide">
+                <img src="/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-2.webp"
+                     srcset="/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-mob-2.webp 900w,
+                         /festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-2.webp 2560w"
+                     sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"
+                     class="ff-hero__slide-image"
+                     alt="">
+            </div>
         </div>
-        <div class="desktopContentSection">
-          <h1>Green</h1>
-          <p>Green is a color that is often associated with nature, growth, and harmony. It is a calming and relaxing color that can evoke feelings of balance, stability, and freshness. In color psychology, green is said to represent balance and stability, making it a popular choice for branding and marketing in the health and wellness industry. </p>
-        </div>
-        <div class="desktopContentSection">
-          <h1>Pink</h1>
-          <p>Pink is a color that is often associated with femininity, romance, and sweetness. It is a softer and more delicate shade of red that can evoke feelings of warmth, love, and nurturing.</p>
-          <p>In the world of branding and marketing, pink is often used to target a female audience or to promote products that are associated with beauty, love, or romance.</p>
-          <p>Pink is also used in the food industry, as it is associated with sweetness and desserts. Pink is often used in breast cancer awareness campaigns, as it has become the signature color of the movement. </p><p>Pink is also commonly used in baby showers and weddings, as it symbolizes love, innocence, and new beginnings.</p>
-        </div>
-        <div class="desktopContentSection">
-          <h1>Blue</h1>
-          <p>Blue is a color that is often associated with calmness, trust, and reliability. It is a peaceful and serene color that can evoke feelings of stability, security, and professionalism. In color psychology, blue is said to represent loyalty and trust, making it a popular choice for branding and marketing in the finance and technology industries.</p>
-        </div>
-
-      </div>
     </div>
 
-    <div class="right">
+    <div class="ff-hero__overlay-container">
+        <div class="ff-hero__content">
+            <h1 class="ff-title--primary ff-hero__title">
+                <span class="ff-hero__title--default">Festival</span>
+                <span class="ff-hero__title--default"><span class="ff-hero__title--accent">of</span>Flavors</span>
 
-      <!-- mobile content -->
-      <div class="mobileContent">
-        <div class="mobilePhoto red"></div>
-        <h1>Red</h1>
-        <p>Red is a color often associated with strong emotions such as passion, love, and anger. It's a bold and attention-grabbing color that can evoke feelings of excitement, warmth, and energy.</p>
-
-        <div class="mobilePhoto green"></div>
-        <h1>Green</h1>
-        <p>Green is a color that is often associated with nature, growth, and harmony. It is a calming and relaxing color that can evoke feelings of balance, stability, and freshness. In color psychology, green is said to represent balance and stability, making it a popular choice for branding and marketing in the health and wellness industry. </p>
-
-        <div class="mobilePhoto pink"></div>
-        <h1>Pink</h1>
-        <p>Pink is a color that is often associated with femininity, romance, and sweetness. It is a softer and more delicate shade of red that can evoke feelings of warmth, love, and nurturing. In the world of branding and marketing, pink is often used to target a female audience or to promote products that are associated with beauty, love, or romance.</p>
-
-        <div class="mobilePhoto blue"></div>
-        <h1>Blue</h1>
-        <p>Blue is a color that is often associated with calmness, trust, and reliability. It is a peaceful and serene color that can evoke feelings of stability, security, and professionalism. In color psychology, blue is said to represent loyalty and trust, making it a popular choice for branding and marketing in the finance and technology industries.</p>
-      </div>
-
-      <!-- desktop content -->
-
-      <div class="desktopPhotos">
-
-        <div class="desktopPhoto red">
-          <img src="https://images.unsplash.com/photo-1593291619462-e4240344ea21?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </h1>
+            <h2 class=".ff-subtitle--primary ff-hero__subtitle">COCKTAIL NIGHTS, PAIRING DINNERS & MORE</h2>
+            <div class="ff-hero__date-badge">
+                <p class="ff-title--primary">Oct, 2024</p>
+            </div>
         </div>
-        <div class="desktopPhoto green">
-          <img src="https://images.unsplash.com/photo-1542321994-ae008783e7e0?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </div>
-        <div class="desktopPhoto pink">
-          <img src="https://images.unsplash.com/photo-1722503281689-04fea84df54a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </div>
-        <div class="desktopPhoto blue">
-          <img src="https://images.unsplash.com/photo-1722218529958-e37e4ed4a194?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </div>
-
-      </div>
-
     </div>
-  </div>
 
-<!--</section>-->
-
-
-
-
+    <div class="ff-hero__scroll-container">
+        <div class="ff-hero__scroll"></div>
+    </div>
+</section>
 
 
+<section class="ff-container">
+    <h2 class="ff-title--primary ff-title--section">Festival of Flavors</h2>
+    <p class="ff-paragraph--section">Savor the moment this October at Tafer Resorts’ first-annual Festival of Flavor, an
+        extraordinary dining and mixology series that will be popping up at each of our resorts across Mexico. The
+        month-long festival is your ticket to embark on a culinary journey, where every dish and drink is crafted to
+        indulge the senses by world-class chefs and mixologists. From the rich tannins of Casa Madero wines paired with
+        succulent aged steaks to the smoky spice of Montelobos mezcal paired with gourmet chocolate, the festival will
+        showcase the very best of Mexico’s culinary heritage—as well as flavors from around the world.</p>
+    <p class="ff-paragraph--section">Each Festival of Flavor dinner is an invitation to discover something new. In
+        partnership with iconic global brands like Jose Cuervo, Patrón, and The Macallan, we’ve curated a mouth-watering
+        lineup of tasting experiences that pay tribute to the ways in which flavors can transport us. Whether it’s a
+        decadent mole or the best margarita you’ve ever had, every bite and sip you take at the Festival of Flavor tells
+        a story.</p>
+</section>
+
+
+<div class="ff-accordion">
+
+    <section id="group-1" class="ff-accordion__group">
+        <div id="menu-1" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Villa del Palmar Cancun</h2></div>
+
+        <div class="ff-accordion__content">
+
+            <div class="ff-content-grid ff-content-grid--left">
+
+                <div class="ff-content-grid__image-frame">
+                    as
+<!--                    <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/villa-del-palmar-cancun-hotel.webp" class="ff-content-grid__image" alt="">-->
+                </div>
+
+
+                <div class="ff-content-grid__details">
+                    <div class="ff-content-grid__details-info">
+                        <div class="ff-details-info-item">
+                            <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/icons/location-mark.svg" class="ff-details-info-icon" alt="">
+                            <p class="ff-text--secondary ff-details-info-label">Cancun</p>
+                        </div>
+                        <div class="ff-details-info-item">
+                            <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/icons/calendar.svg" class="ff-details-info-icon" alt="">
+                            <p class="ff-text--secondary ff-details-info-label">Oct 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="ff-content-grid__details-content">
+                        <p class="ff-details-content__paragraph">Savor the moment this October at [RESORT]’s first-annual Festival of Flavor, an extraordinary dining and
+                            mixology series that will be popping up at [RESTAURANTS PARTICIPATING]. The month-long festival is your
+                            ticket to embark on a culinary journey, where every dish and drink is crafted to indulge the senses by
+                            world-class chefs and mixologists. From the rich tannins of Casa Madero wines paired with succulent aged
+                            steaks to the smoky spice of Montelobos mezcal paired with gourmet chocolate, the festival will showcase
+                            the very best of Mexico’s culinary heritage—as well as flavors from around the world.</p>
+
+                        <div class="ff-details-content__actions">
+                            <a href="#" class="ff-button ff-actions__button--secondary">Events</a>
+                            <a href="#" class="ff-button ff-actions__button--primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+
+    <section id="group-2" class="ff-accordion__group">
+        <div id="menu-2" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Garza Blanca Cancun</h2></div>
+        <div class="ff-accordion__content">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </section>
+
+    <section id="group-3" class="ff-accordion__group">
+        <div id="menu-3" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Garza Blanca Puerto Vallarta</h2></div>
+        <div class="ff-accordion__content">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </section>
+
+    <section id="group-4" class="ff-accordion__group">
+        <div id="menu-4" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Garza Blanca Los Cabos</h2></div>
+        <div class="ff-accordion__content">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </section>
+
+    <section id="group-5" class="ff-accordion__group">
+        <div id="menu-5" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Mousai Cancun</h2></div>
+        <div class="ff-accordion__content">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </section>
+
+    <section id="group-6" class="ff-accordion__group">
+        <div id="menu-6" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Mousai Puerto Vallarta</h2></div>
+        <div class="ff-accordion__content">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </div>
+    </section>
+
+
+</div>
 
 
 
@@ -100,19 +180,168 @@
 
 
 
-<div class="spacer">E M P T Y</div>
-<div class="spacer">E M P T Y</div>
-<div class="spacer">E M P T Y</div>
-<div class="spacer">E M P T Y</div>
-<div class="spacer">E M P T Y</div>
-<div class="spacer">E M P T Y</div>
-<div class="spacer">E M P T Y</div>
-<div class="spacer">E M P T Y</div>
-<div class="spacer">E M P T Y</div>
 
 
 
 
-  <script type="module" src="/main.js"></script>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<br>
+
+<section class="ff-container">
+   CONTAINER
+</section>
+
+
+<br>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<br>
+
+
+
+
+
+
+
+<!--  <script type="module" src="/main.js"></script>-->
+
+
+<!-- GSAP -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<!-- Swiper -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+
+
+
+
+  <script type="text/javascript">
+
+
+      // Al hacer resize el el contenido del accordion se oculta por el overflow
+      // Posible refrescar desde que se muestra el accordion
+
+      window.addEventListener('resize', function() {
+          if (window.innerWidth <= 880) {
+              window.location.reload();
+          }
+      });
+
+
+      if (document.querySelectorAll(".ff-hero__swiper .swiper-slide").length > 1) {
+      const swiper = new Swiper(".ff-hero__swiper", {
+        createElements: true,
+        // effect: 'fade',
+        // coverflowEffect: {
+        //   rotate: 30,
+        //   slideShadows: false,
+        // },
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        // pagination: false,
+        // navigation: false,
+        // draggable: false,
+        // autoplay: {
+          // delay: 2500,
+        // },
+        breakpoints: {
+          // 640: {
+          //     slidesPerView: 1.2,
+          //     spaceBetween: 16,
+          // }
+        }
+      });
+    }
+
+  </script>
+
+
+
+<script type="text/javascript">
+
+    document.addEventListener("DOMContentLoaded", (event) => {
+
+        // Seleccionar todos los grupos y menús
+        let groups = [
+            document.querySelector("#group-1"),
+            document.querySelector("#group-2"),
+            document.querySelector("#group-3"),
+            document.querySelector("#group-4"),
+            document.querySelector("#group-5"),
+            document.querySelector("#group-6")
+        ];
+
+        let menus = [
+            document.querySelector("#menu-1"),
+            document.querySelector("#menu-2"),
+            document.querySelector("#menu-3"),
+            document.querySelector("#menu-4"),
+            document.querySelector("#menu-5"),
+            document.querySelector("#menu-6")
+        ];
+
+        // Crear animaciones para cada grupo
+        let toggles = groups.map(group => createAnimation(group));
+
+        // Agregar evento click a cada menú
+        menus.forEach((menu, index) => {
+            menu.addEventListener("click", () => {
+                toggles.forEach((toggle, toggleIndex) => {
+                    toggle(menu === menus[toggleIndex] ? menu : null);
+                });
+            });
+        });
+
+        // Activar el primer elemento por defecto
+        toggles[0](menus[0]);  // Esto abre el primer menú (group-1) automáticamente
+
+        // Función para crear la animación
+        function createAnimation(element) {
+            let menu = element.querySelector(".ff-accordion__heading");
+            let box = element.querySelector(".ff-accordion__content");
+
+            gsap.set(box, { height: "auto" });
+
+            let animation = gsap.from(box, {
+                height: 0,
+                duration: 0.5,
+                ease: "power1.inOut"
+            }).reverse();
+
+            return function(clickedMenu) {
+                if (clickedMenu === menu) {
+                    animation.reversed(!animation.reversed());
+                } else {
+                    animation.reverse();
+                }
+            };
+        }
+
+    });
+
+</script>
+
+
+
+
   </body>
 </html>
+
+
