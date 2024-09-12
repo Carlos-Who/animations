@@ -11,29 +11,912 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
+<!--    <link rel="stylesheet" href="style.css"/>-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
   </head>
   <body>
 <!--    <div id="app"></div>-->
 
-<!-- Festival of Flavor -->
 
+
+<!-- STYLES VARIABLES ~ (start) -->
+<style>
+    :root {
+        --ff-dark-900: #000000;
+        --ff-primary-color: #3498db;
+        --ff-accent-color: #e74c3c;
+        --ff-taffer-gold: #84754EFF;
+    }
+</style>
+<!-- STYLES VARIABLES ~ (end) -->
+
+
+<style>
+    .ff-text--primary {
+        /*user-select: none;*/
+        font-family: "Playfair Display", serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+    }
+    .ff-text--secondary {
+        /*user-select: none;*/
+        font-family: "Proxima Nova", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ff-paragraph {
+        font-size: clamp(.9rem, 10vw, 1.1rem);
+    }
+    .ff-paragraph--accent {
+        font-size: clamp(.9rem, 10vw, 1.1rem);
+        font-weight: 500;
+    }
+
+    .swiper-button-next {
+        color: white !important;
+    }
+    .swiper-button-prev {
+        color: white !important;
+    }
+
+    section.ff-container {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        width: 85%;
+        max-width: 40rem;
+        height: auto;
+        /*background-color: #8ea3a3;*/
+    }
+    h2.ff-title--section {
+        text-align: center;
+        font-size: 2.8rem;
+        max-width: 50rem;
+        margin: 0 auto;
+        margin-bottom: 1.3rem;
+    }
+
+    h3.ff-title--section {
+        text-align: center;
+        font-size: 2.2rem;
+        max-width: 50rem;
+        margin: 0 auto;
+        margin-bottom: 1.3rem;
+    }
+
+    p.ff-paragraph--section {
+        text-align: center;
+        font-size: 1.05rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        max-width: 48rem;
+        font-weight: 400;
+    }
+
+    .ff-title {
+        color: var(--ff-taffer-gold);
+        font-size: clamp(1rem, 10vw, 3rem);
+        margin-bottom: 3rem;
+    }
+    .ff-title--right {
+        color: var(--ff-taffer-gold);
+        font-size: clamp(1rem, 10vw, 3rem);
+        margin-bottom: 3rem;
+        text-align: right;
+    }
+
+
+    @media (min-width: 768px) {
+        section.ff-container {
+            width: 90%;
+            max-width: 55rem;
+        }
+    }
+    @media (min-width: 1400px) {
+        section.ff-container {
+            width: 80%;
+            max-width: 88rem;
+        }
+    }
+</style>
+
+
+<!-- STYLES HERO ~ (start) -->
+<style>
+    section.ff-hero {
+        position: relative;
+        isolation: isolate;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    div.ff-hero__swiper.swiper {
+        position: relative;
+        min-height: 100%;
+        height: 85vh;
+    }
+
+    div.ff-hero__slide.swiper-slide {
+        width: 100%;
+        height: 100%;
+    }
+
+    img.ff-hero__slide-image {
+        user-select: none;
+        cursor: grab;
+        display: block;
+        min-width: 100%;
+        height: 100%;
+        aspect-ratio: auto;
+        object-fit: cover;
+    }
+
+    div.ff-hero__overlay-container {
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        width: 100%;
+        height: 60%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        padding: 1.1rem;
+        background: rgb(255,255,255);
+        background: linear-gradient(0deg, rgba(255,255,255,1) 20%, rgba(255,255,255,0) 100%);
+    }
+
+    div.ff-hero__content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        height: auto;
+    }
+
+    h1.ff-hero__title {
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        color: var(--ff-dark-900);
+        filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+        margin-bottom: 1.1rem;
+    }
+
+    h1 span.ff-hero__title--default {
+        font-size: clamp(3.1rem, 4.9vw + 1rem, 4.4rem);
+        line-height: clamp(3.3rem, 5.5vw + 1rem, 4.6rem);
+    }
+
+    h1 span.ff-hero__title--accent {
+        display: inline-block;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: clamp(2rem, 2.9vw + 1rem, 3rem);
+        line-height: 0;
+    }
+
+    h2.ff-hero__subtitle {
+        user-select: none;
+        color: var(--ff-dark-900);
+        font-weight: 400;
+        font-size: clamp(.98rem, 6vw + .5rem, 1.2rem);
+        line-height: clamp(1.1rem, 7vw + .5rem, 1.8rem);
+        width: 85%;
+        max-width: 25rem;
+        margin-bottom: 1.3rem;
+    }
+
+    div.ff-hero__date-badge {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        padding: .3em 1.3em;
+        border: .185rem solid var(--ff-taffer-gold);
+        border-radius: 900rem;
+    }
+
+    div.ff-hero__date-badge p {
+        user-select: none;
+        color: var(--ff-taffer-gold);
+        font-size: clamp(1rem, 5vw + .9rem, 1.8rem);
+        line-height: normal;
+        margin-bottom: .28rem;
+    }
+</style>
+<!-- <<   Breakpoints   >> -->
+<style>
+    @media (min-width: 576px) {
+        div.ff-hero__overlay-container {
+            justify-content: center;
+            align-items: flex-end;
+        }
+        div.ff-hero__date-badge {
+            margin: 0 auto !important;
+        }
+
+    }
+    @media (min-width: 768px) {
+        div.ff-hero__overlay-container {
+            bottom: 0;
+            right: 0;
+            width: 43%;
+            max-width: 48rem;
+            height: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0 5%;
+            background: linear-gradient(90deg, rgba(255,255,255,0) 5%, rgb(255, 255, 255) 60%);
+        }
+
+        div.ff-hero__content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: fit-content;
+            height: auto;
+        }
+
+        div.ff-hero__scroll-container {
+            position: absolute;
+            bottom: 3%;
+            width: 100%;
+            height: 3.8rem;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+        }
+
+        .ff-hero__scroll {
+            width: 2.2rem;
+            height: 2.2rem;
+            border: .13rem solid var(--ff-taffer-gold);
+            border-radius: 50%;
+            position: relative;
+            animation: scrollDown 1.5s ease-in-out infinite;
+            -webkit-animation: scrollDown 1.5s ease-in-out infinite;
+        }
+
+        .ff-hero__scroll::before {
+            content: '';
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            width: .8rem;
+            height: .8rem;
+            border-left: .13rem solid var(--ff-taffer-gold);
+            border-bottom: .13rem solid var(--ff-taffer-gold);
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        @keyframes scrollDown {
+            0% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(10px);
+            }
+            60% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @-webkit-keyframes scrollDown {
+            0% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(10px);
+            }
+            60% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+
+</style>
+<!-- STYLES HERO ~ (end) -->
+
+
+<!-- STYLES NAVBAR ~ (start) -->
+<style>
+    .ff-navbar {
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        isolation: isolate;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3.5rem;
+        z-index: 999;
+        background-color: var(--ff-dark-900);
+    }
+    .ff-navbar-nav {
+        position: fixed;
+        top: 0;
+        margin: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        width: 100%;
+        height: calc(100vh - 3.5rem);
+        padding: 0;
+        background-color: #141516;
+        opacity: 0;
+        /*border: 1px solid red;*/
+    }
+    .ff-nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+    .ff-nav-item__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #acacac;
+        text-decoration: none;
+        padding: 1em .4em;
+        border-radius: .15rem;
+        font-size: clamp(.2rem, 3vw + 1rem, 1rem);
+        width: 100%;
+        font-weight: 400;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, 0.3s ease-in-out;
+    }
+    .ff-nav-item__link:hover {
+        cursor: pointer;
+        color: #eaddb8;
+        background-color: #c4911605;
+    }
+    .ff-nav-item__separator {
+        display: none;
+    }
+    .ff-navbar__button {
+        color: var(--ff-taffer-gold);
+        display: block;
+        width: 90%;
+        height: 90%;
+        background-color: transparent;
+    }
+</style>
+<!-- <<   Breakpoints   >> -->
+<style>
+
+    @media (min-width: 880px) {
+        .ff-navbar__button {
+            height: 0;
+            padding: 0 2em;
+            display: none;
+        }
+
+        .ff-navbar-nav {
+            position: relative;
+            display: flex;
+            flex-flow: row;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+        .ff-nav-item__link {
+            height: 80%;
+        }
+        .ff-nav-item__link:hover {
+            cursor: pointer;
+            color: #d5ba97;
+            background-color: #423f373d;
+        }
+        .ff-nav-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            height: 100%;
+        }
+        .ff-nav-item__separator {
+            display: block;
+            width: 1px;
+            height: 60%;
+            background-color: #393939;
+            margin: .3rem;
+        }
+    }
+</style>
+<!-- STYLES NAVBAR ~ (end) -->
+
+
+<!-- STYLES ACCORDION ~ (start) -->
+<style>
+    h2.ff-title--accordion, h3.ff-title--accordion, p.ff-title--accordion{
+        user-select: none;
+        color: var(--ff-taffer-gold);
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    div.ff-accordion {
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        width: 100%;
+        height: auto;
+    }
+
+    section.ff-accordion__group {
+        position: relative;
+        isolation: isolate;
+        margin: 0;
+        padding: 0;
+        /*margin-bottom: .2rem;*/
+    }
+
+    .ff-accordion__heading {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: .5em;
+        border-top: .13rem solid var(--ff-taffer-gold);
+        border-bottom: .13rem solid var(--ff-taffer-gold);
+        background-color: rgba(241, 222, 194, 0.22);
+    }
+
+
+    .ff-accordion__content {
+        width: 90%;
+        margin: 0 auto;
+        height: 0;
+        overflow: hidden;
+        font-size: 1rem;
+        transition: height 0.5s ease;
+        /*background-color: salmon;*/
+    }
+
+    div.ff-content-grid {
+        display: flex;
+        height: 100%;
+        padding: 1em 0;
+    }
+
+    .ff-content-grid--left {
+        flex-direction: column;
+    }
+
+    .ff-content-grid__image-frame {
+        margin-bottom: 1.4rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    div.ff-content-grid__details-info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    div.ff-details-info-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1em 0;
+    }
+
+    img.ff-details-info-icon {
+        display: block;
+        width: 100%;
+        max-width: 1.4rem;
+        margin-right: .4rem;
+    }
+
+    p.ff-details-info-label {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 1.3rem;
+        line-height: 0;
+    }
+
+
+    .ff-content-grid__details-content {
+        height: fit-content;
+        /*height: 100%;*/
+    }
+
+    .ff-details-content__brand-logo {
+        padding: 0;
+        margin: 0;
+        display: block;
+        width: 100%;
+        max-width: 13rem;
+        object-fit: cover;
+        aspect-ratio: auto;
+        margin-bottom: 2rem;
+    }
+
+    p.ff-details-content__paragraph {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ff-details-content__actions {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column;
+        gap: 1rem;
+        /*max-width: 23rem;*/
+    }
+
+    p.ff-details-content__paragraph {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .ff-details-content__actions {
+        display: flex;
+        justify-content: space-between;
+        flex-flow: column;
+        gap: 1rem;
+        max-width: 23rem;
+    }
+
+    .ff-actions__button--primary {
+        color: white;
+        background-color: var(--ff-taffer-gold);
+    }
+
+    .ff-actions__button--secondary {
+        color: var(--ff-taffer-gold);
+        background-color: transparent;
+        border: .15rem solid var(--ff-taffer-gold);
+    }
+</style>
+
+<style>
+    @media (min-width: 879px) {
+        /* ACCORDION : Start  */
+        section.ff-accordion__group {
+            /*padding: 4em 0;*/
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+        .ff-accordion__heading {
+            display: none;
+        }
+
+        .ff-accordion__content {
+            width: 90%;
+            max-width: 73rem;
+            height: auto !important; /* Aseguramos que la altura sea automática en desktop */
+            font-size: 14px;
+            overflow: visible !important;
+        }
+
+        div.ff-content-grid__details-info {
+            display: flex;
+            justify-content: flex-start;
+            gap: 2rem;
+        }
+
+        div.ff-content-grid {
+            display: grid;
+            gap: 1.3rem;
+            justify-content: center;
+            margin-bottom: 6rem;
+            height: auto !important;
+            overflow: visible !important;
+        }
+
+        .ff-content-grid--left {
+            grid-template-columns: .7fr 1fr;
+        }
+
+        .ff-content-grid--right {
+            grid-template-columns: 1fr .7fr;
+            justify-items: end;
+        }
+
+        .ff-content-grid--left .ff-content-grid__details {
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        .ff-content-grid--left .ff-content-grid__image-frame {
+            grid-column: 2;
+        }
+
+        .ff-content-grid--right .ff-content-grid__details {
+            grid-row: 1;
+            grid-column: 2;
+        }
+
+        .ff-content-grid--right .ff-content-grid__image-frame {
+            grid-column: 1;
+        }
+
+        .ff-content-grid__image-frame {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        .ff-content-grid--left .ff-content-grid__image-frame:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 3%;
+            right: 0;
+            width: 35%;
+            height: 100%;
+            max-height: 43rem;
+            background-color: #F2F2F2;
+        }
+
+        .ff-content-grid--right .ff-content-grid__image-frame:before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 35%;
+            height: 100%;
+            max-height: 43rem;
+            background-color: #F2F2F2;
+        }
+
+        div.ff-content-grid__details {
+            max-width: 29rem;
+        }
+
+    }
+</style>
+<!-- STYLES ACCORDION ~ (end) -->
+
+
+<!-- STYLES EVENTS ~ (start) -->
+<style>
+    .ff-events {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 9rem;
+    }
+
+    div.ff-events__swiper.swiper {
+        padding: .4em;
+        margin-bottom: 2rem;
+    }
+
+    article.ff-events__slide {
+        cursor: grab;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #F2F2F2;
+        padding: 1.3em;
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        background: rgba(255, 255, 255, 0.27);
+        backdrop-filter: blur(6.3px);
+        -webkit-backdrop-filter: blur(6.3px);
+    }
+
+    .ff-slide__date {
+        user-select: none;
+        font-size: clamp(.9rem, 18vw + 1rem, 2rem);
+
+        color: var(--ff-taffer-gold);
+        text-align: center;
+        margin-bottom: .3rem;
+        line-height: clamp(.9rem, 19vw + 1rem, 2.5rem);
+    }
+
+    .ff-slide__title {
+        user-select: none;
+        text-align: center;
+        margin-bottom: 1.3rem;
+    }
+
+    .ff-slide__text--accent {
+        user-select: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .ff-slide__text {
+        user-select: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .ff-events-button-group {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+    }
+    .ff-events-button-group button {
+        margin: 0;
+    }
+
+</style>
+<!-- STYLES EVENTS ~ (end) -->
+
+<!-- STYLES RESTAURANTS ~ (start) -->
+<style>
+    .ff-restaurant__slide-logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 6.378rem;
+        padding: .8em;
+    }
+    img.ff-restaurant__slide-logo {
+
+        display: block;
+        width: 8rem;
+        height: auto;
+        overflow: visible;
+    }
+</style>
+<!-- STYLES RESTAURANTS ~ (end) -->
+
+
+<!-- STYLES CONTACT-CTA ~(start) -->
+<style>
+    .ff-contact-cta {
+        background-color: #FBFBFB;
+        background-color: #F2F2F2;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4%;
+        margin-bottom: 6rem;
+    }
+    .ff-contact-cta__title {
+        font-size: clamp(.9rem, 11vw, 1.5rem);
+        font-weight: 500;
+        margin-bottom: .4rem;
+    }
+
+    .ff-contact-cta ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column;
+        width: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .ff-contact-cta ul li p{
+        margin: 0;
+    }
+</style>
+<!-- STYLES CONTACT-CTA ~(end) -->
+
+
+<!-- STYLES SPONSORS ~(start) -->
+<style>
+    .sponsors__container {
+        background-color: #000000;
+        background-color: #151618;
+        padding: 0 5%;
+        overflow: hidden;
+        isolation: isolate;
+        margin: 0;
+        margin-bottom: 4rem;
+    }
+
+    .sponsors__container-cell {
+        padding: 1em;
+        margin: 0 !important;
+        transition: background-color 0.4s ease, transform 0.4s ease;
+    }
+
+    .sponsors__container-cell:hover {
+        background-color: rgba(255, 255, 255, 0.06);
+        transform: scale(1.05);
+    }
+
+    /* Contenedor de las imágenes para normalizarlas */
+    .sponsor-logo {
+        width: 100%;
+        height: 100px;
+        object-fit: contain;
+        filter: opacity(23%);
+        transition: filter 0.4s ease, transform 0.4s ease;
+    }
+
+    .sponsors__container-cell:hover .sponsor-logo {
+        filter: opacity(100%);
+        transform: scale(1.1);
+    }
+</style>
+<!-- STYLES SPONSORS ~(end) -->
+
+<!-- FESTIVAL_OF_FLAVOR :: (start) -->
+
+
+
+<!-- SECTION NAVBAR | Desktop/Mobile  :: (start) -->
+<nav class="ff-navbar">
+    <button id="navbarToggleButton" type="button" class="ff-text--primary ff-navbar__button">SELECT A RESORT</button>
+    <ul class="ff-navbar-nav" data-magellan>
+        <li class="ff-nav-item">
+            <a href="#vpcnSection" class="ff-text--secondary ff-nav-item__link">Villa del Palmar Cancun</a>
+        </li>
+        <li class="ff-nav-item">
+            <span class="ff-nav-item__separator"></span>
+        </li>
+        <li class="ff-nav-item">
+            <a href="#" class="ff-text--secondary ff-nav-item__link">Garza Blanca Puerto Vallarta</a>
+        </li>
+        <li class="ff-nav-item">
+            <span class="ff-nav-item__separator"></span>
+        </li>
+        <li class="ff-nav-item">
+            <a href="#" class="ff-text--secondary ff-nav-item__link">Garza Blanca Cancun</a>
+        </li>
+        <li class="ff-nav-item">
+            <span class="ff-nav-item__separator"></span>
+        </li>
+        <li class="ff-nav-item">
+            <a href="#" class="ff-text--secondary ff-nav-item__link">Garza Blanca Los Cabos</a>
+        </li>
+        <li class="ff-nav-item">
+            <span class="ff-nav-item__separator"></span>
+        </li>
+        <li class="ff-nav-item">
+            <a href="#" class="ff-text--secondary ff-nav-item__link">Mousai Puerto Vallarta</a>
+        </li>
+        <li class="ff-nav-item">
+            <span class="ff-nav-item__separator"></span>
+        </li>
+        <li class="ff-nav-item">
+            <a href="#" class="ff-text--secondary ff-nav-item__link">Mousai Cancun</a>
+        </li>
+    </ul>
+</nav>
+<!-- SECTION NAVBAR DESKTOP :: (end) -->
+
+
+<!-- SECTION HERO :: (start) -->
 <section class="ff-hero">
     <div class="ff-hero__swiper swiper">
         <div class="ff-hero__swiper-wrapper swiper-wrapper">
             <div class="ff-hero__slide swiper-slide">
-                <img src="/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-1.webp"
-                     srcset="/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-mob-1.webp 900w,
-                         /festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-1.webp 2560w"
+                <img src="/public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-1.webp"
+                     srcset="/public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-mob-1.webp 900w,
+                         /public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-1.webp 2560w"
                      sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"
                      class="ff-hero__slide-image"
                      alt="">
             </div>
             <div class="ff-hero__slide swiper-slide">
-                <img src="/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-2.webp"
-                     srcset="/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-mob-2.webp 900w,
-                         /festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-2.webp 2560w"
+                <img src="/public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-2.webp"
+                     srcset="/public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-mob-2.webp 900w,
+                         /public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-2.webp 2560w"
                      sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"
                      class="ff-hero__slide-image"
                      alt="">
@@ -43,14 +926,14 @@
 
     <div class="ff-hero__overlay-container">
         <div class="ff-hero__content">
-            <h1 class="ff-title--primary ff-hero__title">
+            <h1 class="ff-text--primary ff-hero__title">
                 <span class="ff-hero__title--default">Festival</span>
                 <span class="ff-hero__title--default"><span class="ff-hero__title--accent">of</span>Flavors</span>
 
             </h1>
-            <h2 class=".ff-subtitle--primary ff-hero__subtitle">COCKTAIL NIGHTS, PAIRING DINNERS & MORE</h2>
+            <h2 class="ff-text--secondary ff-hero__subtitle">COCKTAIL NIGHTS, PAIRING DINNERS & MORE</h2>
             <div class="ff-hero__date-badge">
-                <p class="ff-title--primary">Oct, 2024</p>
+                <p class="ff-text--primary">Oct, 2024</p>
             </div>
         </div>
     </div>
@@ -59,177 +942,334 @@
         <div class="ff-hero__scroll"></div>
     </div>
 </section>
+<!-- SECTION HERO :: (end) -->
 
 
+<!-- SECTION INTRO :: (start) -->
 <section class="ff-container">
-    <h2 class="ff-title--primary ff-title--section">Festival of Flavors</h2>
-    <p class="ff-paragraph--section">Savor the moment this October at Tafer Resorts’ first-annual Festival of Flavor, an
+    <h2 class="ff-text--primary ff-title--section">Festival of Flavors</h2>
+    <p class="ff-text--secondary ff-paragraph--section">Savor the moment this October at Tafer Resorts’ first-annual Festival of Flavor, an
         extraordinary dining and mixology series that will be popping up at each of our resorts across Mexico. The
         month-long festival is your ticket to embark on a culinary journey, where every dish and drink is crafted to
         indulge the senses by world-class chefs and mixologists. From the rich tannins of Casa Madero wines paired with
         succulent aged steaks to the smoky spice of Montelobos mezcal paired with gourmet chocolate, the festival will
         showcase the very best of Mexico’s culinary heritage—as well as flavors from around the world.</p>
-    <p class="ff-paragraph--section">Each Festival of Flavor dinner is an invitation to discover something new. In
+    <p class="ff-text--secondary ff-paragraph--section">Each Festival of Flavor dinner is an invitation to discover something new. In
         partnership with iconic global brands like Jose Cuervo, Patrón, and The Macallan, we’ve curated a mouth-watering
         lineup of tasting experiences that pay tribute to the ways in which flavors can transport us. Whether it’s a
         decadent mole or the best margarita you’ve ever had, every bite and sip you take at the Festival of Flavor tells
         a story.</p>
 </section>
+<!-- SECTION INTRO :: (end) -->
 
 
-<div class="ff-accordion">
+<!-- SECTION ACCORDION :: (start) -->
+<section class="ff-accordion">
 
-    <section id="group-1" class="ff-accordion__group">
-        <div id="menu-1" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Villa del Palmar Cancun</h2></div>
+    <section id="group-1" class="ff-accordion__group" >
+        <div id="menu-1" class="ff-accordion__heading"><p class="ff-title--primary ff-title--accordion">Villa del Palmar Cancun</p></div>
 
         <div class="ff-accordion__content">
+
+            <h2 id="vpcnSection" class="ff-text--primary ff-title" data-magellan-target="vpcnSection">Villa del Palmar Cancun</h2>
 
             <div class="ff-content-grid ff-content-grid--left">
 
                 <div class="ff-content-grid__image-frame">
-                    <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/villa-del-palmar-cancun-hotel.webp" class="ff-content-grid__image" alt="">
+                    <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/villa-del-palmar-cancun-hotel-cover.webp" class="ff-content-grid__image" alt="">
                 </div>
 
 
                 <div class="ff-content-grid__details">
-                    <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/villa-del-palmar-logo-negative.svg" class="ff-details-content__brand-logo" alt="">
+                    <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/villa-del-palmar-official-logo.svg" class="ff-details-content__brand-logo" alt="">
                     <div class="ff-content-grid__details-info">
                         <div class="ff-details-info-item">
-                            <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/icons/location-mark.svg" class="ff-details-info-icon" alt="">
+                            <img src="/lib/dist/img/festival-of-flavor-2024/icons/location-mark.svg" class="ff-details-info-icon" alt="">
                             <p class="ff-text--secondary ff-details-info-label">Cancun</p>
                         </div>
                         <div class="ff-details-info-item">
-                            <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/icons/calendar.svg" class="ff-details-info-icon" alt="">
+                            <img src="/lib/dist/img/festival-of-flavor-2024/icons/calendar.svg" class="ff-details-info-icon" alt="">
                             <p class="ff-text--secondary ff-details-info-label">Oct 2024</p>
                         </div>
                     </div>
 
                     <div class="ff-content-grid__details-content">
-                        <p class="ff-details-content__paragraph">Savor the moment this October at [RESORT]’s first-annual Festival of Flavor, an extraordinary dining and
-                            mixology series that will be popping up at [RESTAURANTS PARTICIPATING]. The month-long festival is your
-                            ticket to embark on a culinary journey, where every dish and drink is crafted to indulge the senses by
-                            world-class chefs and mixologists. From the rich tannins of Casa Madero wines paired with succulent aged
-                            steaks to the smoky spice of Montelobos mezcal paired with gourmet chocolate, the festival will showcase
-                            the very best of Mexico’s culinary heritage—as well as flavors from around the world.</p>
+                        <p class="ff-details-content__paragraph">Savor the best flavors Villa del Palmar has to offer
+                            this October at our Festival of Flavor, an extraordinary dining and mixology series that
+                            will be popping up at Davino and Zamá. </p>
+                        <p class="ff-details-content__paragraph">This month-long festival is your ticket to embark on a
+                            truly unique culinary journey, where every dish and drink is crafted to indulge the senses
+                            by world-class chefs and mixologists — from the rich tannins of Casa Madero wines paired
+                            with succulent aged steaks, to the smoky spice of Montelobos mezcal paired with gourmet
+                            chocolate, the festival will showcase the very best of Mexico’s culinary heritage, as well
+                            as flavors from around the world. </p>
 
                         <div class="ff-details-content__actions">
-                            <a href="#" class="ff-button ff-actions__button--secondary">Events</a>
-                            <a href="#" class="ff-button ff-actions__button--primary">Book Now</a>
+                            <a href="#" type="button" class="button hollow primary small">Events</a>
+                            <button type="button" class="button primary">Book Now</button>
                         </div>
                     </div>
                 </div>
-
             </div>
 
-
-            <div class="ff-events">
-                <div class="ff-vpcn-events__swiper swiper">
-                    <div class="ff-vpcn-events__swiper-wrapper swiper-wrapper">
-                        <article class="ff-events__slide swiper-slide">
-                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
-                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
-
-                            <p class="ff-slide__text--accent">LOCATION:</p>
-                            <p class="f-slide__text">Davino</p>
-                            <p class="ff-slide__text--accent">SCHEDULE:</p>
-                            <p class="f-slide__text">6:00 - 11:00 pm</p>
-                            <p class="ff-slide__text--accent">COST:</p>
-                            <p class="f-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
-                                Sommelier</p>
+            <section class="ff-restaurant">
+                <h3 class="ff-text--primary ff-title--section">RESTAURANTS PARTICIPATING</h3>
+                <div class="ff-vpcn-restaurant__swiper ff-restaurant__swiper swiper">
+                    <div class="ff-restaurant__swiper-wrapper swiper-wrapper">
+                        <article class="ff-restaurant__slide swiper-slide">
+                            <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/restaurants/davino-vpcn.webp" class="ff-restaurant__slide-image" alt="">
+                            <div class="ff-restaurant__slide-logo-container">
+                                <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/restaurants/davino-logo.svg" class="ff-restaurant__slide-logo" alt="">
+                            </div>
                         </article>
-                        <article class="ff-events__slide swiper-slide">
-                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
-                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
-
-                            <p class="ff-slide__text--accent">LOCATION:</p>
-                            <p class="f-slide__text">Davino</p>
-                            <p class="ff-slide__text--accent">SCHEDULE:</p>
-                            <p class="f-slide__text">6:00 - 11:00 pm</p>
-                            <p class="ff-slide__text--accent">COST:</p>
-                            <p class="f-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
-                                Sommelier</p>
-                        </article>
-                        <article class="ff-events__slide swiper-slide">
-                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
-                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
-
-                            <p class="ff-slide__text--accent">LOCATION:</p>
-                            <p class="f-slide__text">Davino</p>
-                            <p class="ff-slide__text--accent">SCHEDULE:</p>
-                            <p class="f-slide__text">6:00 - 11:00 pm</p>
-                            <p class="ff-slide__text--accent">COST:</p>
-                            <p class="f-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
-                                Sommelier</p>
-                        </article>
-                        <article class="ff-events__slide swiper-slide">
-                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
-                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
-
-                            <p class="ff-slide__text--accent">LOCATION:</p>
-                            <p class="f-slide__text">Davino</p>
-                            <p class="ff-slide__text--accent">SCHEDULE:</p>
-                            <p class="f-slide__text">6:00 - 11:00 pm</p>
-                            <p class="ff-slide__text--accent">COST:</p>
-                            <p class="f-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
-                                Sommelier</p>
+                        <article class="ff-restaurant__slide swiper-slide">
+                            <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/restaurants/zama-vpcn.webp" class="ff-restaurant__slide-image" alt="">
+                            <div class="ff-restaurant__slide-logo-container">
+                                <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/restaurants/zama-logo.svg" class="ff-restaurant__slide-logo" alt="">
+                            </div>
                         </article>
                     </div>
+                    <div class="swiper-button-nav swiper-button-next"></div>
+                    <div class="swiper-button-nav swiper-button-prev"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
                 </div>
-            </div>
+            </section>
 
+            <section class="ff-events">
+                <h3 class="ff-text--primary ff-title--section">EVENTS</h3>
+
+                <div class="ff-vpcn-events__swiper ff-events__swiper swiper">
+                    <div class="ff-events__swiper-wrapper swiper-wrapper">
+<!--                        <?php if (isset($events['VPCN'])) : ?>-->
+<!--                        <?php foreach ($events['VPCN'] as $ffEvent) : ?>-->
+<!--                        <article class="ff-events__slide swiper-slide">-->
+<!--                            <p class="ff-text&#45;&#45;primary ff-slide__date"><?= $ffEvent['date'][$lang] ?></p>-->
+<!--                            <h3 class="ff-text&#45;&#45;primary ff-slide__title"><?= $ffEvent['title'][$lang] ?></h3>-->
+
+<!--                            <p class="ff-slide__text&#45;&#45;accent">LOCATION:</p>-->
+<!--                            <p class="ff-slide__text"><?= $ffEvent['location'] ?></p>-->
+<!--                            <br>-->
+<!--                            <p class="ff-slide__text&#45;&#45;accent">SCHEDULE:</p>-->
+<!--                            <p class="ff-slide__text"><?= $ffEvent['schedule'][$lang] ?></p>-->
+<!--                            <br>-->
+<!--                            <p class="ff-slide__text&#45;&#45;accent">COST:</p>-->
+<!--                            <p class="ff-slide__text"><?= $ffEvent['cost'][$lang] ?></p>-->
+<!--                            <br>-->
+<!--                        </article>-->
+<!--                        <?php endforeach; ?>-->
+<!--                        <?php endif; ?>-->
+                    </div>
+                    <!--                    <div class="swiper-pagination"></div>-->
+                </div>
+                <div class="ff-events-button-group">
+                    <button type="button" class="button hollow primary">DOWNLOAD PROGRAM</button>
+                    <button type="button" class="button primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample">Reserve Your Experience
+                    </button>
+                </div>
+            </section>
+
+            <section class="ff-contact-cta">
+                <p class="ff-text--secondary ff-contact-cta__title">CONTACT INFORMATION</p>
+                <ul>
+                    <li><p class="ff-text--secondary ff-paragraph">diana.sandoval@villagroupcancun.com</p></li>
+                    <li><p class="ff-text--secondary ff-paragraph--accent">Reservations by phone:</p></li>
+                    <li><p class="ff-text--secondary ff-paragraph">+01 998 193 2600. Ext: 655</p></li>
+                </ul>
+            </section>
+
+
+
+            <section>
+                <h3 class="ff-text--primary ff-title--section">SPECIAL GUESTS</h3>
+                <div class="grid-x grid-margin-x align-center align-middle sponsors__container">
+                    <div class="cell small-6 medium-3 large-3 text-center align-self-middle sponsors__container-cell">
+                        <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/sponsors/jose-cuervo-sponsor-logo.png" alt="Logo 1" class="sponsor-logo">
+                    </div>
+                    <div class="cell small-6 medium-3 large-3 text-center align-self-middle sponsors__container-cell">
+                        <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/sponsors/casa-madero-sponsor-logo.png" alt="Logo 2" class="sponsor-logo">
+                    </div>
+                </div>
+            </section>
 
         </div>
-
-
-
-
     </section>
 
-    <section id="group-2" class="ff-accordion__group">
-        <div id="menu-2" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Villa del Palmar Cancun</h2></div>
+
+
+
+    <section id="group-2" class="ff-accordion__group" >
+        <div id="menu-2" class="ff-accordion__heading"><p class="ff-title--primary ff-title--accordion">Garza Blanca Puerto Vallarta</p></div>
 
         <div class="ff-accordion__content">
+
+            <h2 id="gbpvSection" class="ff-text--primary ff-title--right" data-magellan-target="gbpvSection">Garza Blanca Puerto Vallarta</h2>
 
             <div class="ff-content-grid ff-content-grid--right">
 
                 <div class="ff-content-grid__image-frame">
-                    <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/villa-del-palmar-cancun-hotel.webp" class="ff-content-grid__image" alt="">
+                    <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/garza-blanca-puerto-vallarta-cover.webp" class="ff-content-grid__image" alt="">
                 </div>
 
 
                 <div class="ff-content-grid__details">
-                    <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/villa-del-palmar-logo-negative.svg" class="ff-details-content__brand-logo" alt="">
+                    <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/villa-del-palmar-official-logo.svg" class="ff-details-content__brand-logo" alt="">
                     <div class="ff-content-grid__details-info">
                         <div class="ff-details-info-item">
-                            <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/icons/location-mark.svg" class="ff-details-info-icon" alt="">
-                            <p class="ff-text--secondary ff-details-info-label">Cancun</p>
+                            <img src="/lib/dist/img/festival-of-flavor-2024/icons/location-mark.svg" class="ff-details-info-icon" alt="">
+                            <p class="ff-text--secondary ff-details-info-label">Puerto Vallarta</p>
                         </div>
                         <div class="ff-details-info-item">
-                            <img src="/festival-of-flavor-2024/demo/hotels-sections/vpcn/icons/calendar.svg" class="ff-details-info-icon" alt="">
+                            <img src="/lib/dist/img/festival-of-flavor-2024/icons/calendar.svg" class="ff-details-info-icon" alt="">
                             <p class="ff-text--secondary ff-details-info-label">Oct 2024</p>
                         </div>
                     </div>
 
                     <div class="ff-content-grid__details-content">
-                        <p class="ff-details-content__paragraph">Savor the moment this October at [RESORT]’s first-annual Festival of Flavor, an extraordinary dining and
-                            mixology series that will be popping up at [RESTAURANTS PARTICIPATING]. The month-long festival is your
-                            ticket to embark on a culinary journey, where every dish and drink is crafted to indulge the senses by
-                            world-class chefs and mixologists. From the rich tannins of Casa Madero wines paired with succulent aged
-                            steaks to the smoky spice of Montelobos mezcal paired with gourmet chocolate, the festival will showcase
-                            the very best of Mexico’s culinary heritage—as well as flavors from around the world.</p>
+                        <p class="ff-details-content__paragraph">Vibrant, bold and sophisticated sensations await you
+                            this October at our annual Festival of Flavor — hosted on Garza Blanca Puerto Vallarta and
+                            its celebrated restaurants, Blanca Blue and Bocados. </p>
+                        <p class="ff-details-content__paragraph">Embark on this once-in-a-lifetime culinary journey
+                            where every dish, pairing and invited guest was catered to make only the most extraordinary
+                            flavors this country has to offer. Created alongside iconic brands such as Tequila Trujillo,
+                            Taberna 3 Gallos, Vinoteca, Viparmex and Wine Studio, there is no other event in the world
+                            as mouth-watering as this. </p>
 
                         <div class="ff-details-content__actions">
-                            <a href="#" class="ff-button ff-actions__button--secondary">Events</a>
-                            <a href="#" class="ff-button ff-actions__button--primary">Book Now</a>
+                            <a href="#" type="button" class="button hollow primary small">Events</a>
+                            <button type="button" class="button primary">Book Now</button>
                         </div>
                     </div>
                 </div>
-
-
             </div>
-        </div>
 
+            <section class="ff-restaurant">
+                <h3 class="ff-text--primary ff-title--section">RESTAURANTS PARTICIPATING</h3>
+                <div class="ff-vpcn-restaurant__swiper ff-restaurant__swiper swiper">
+                    <div class="ff-restaurant__swiper-wrapper swiper-wrapper">
+                        <article class="ff-restaurant__slide swiper-slide">
+                            <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/restaurants/blanca-blue-gbpv.webp" class="ff-restaurant__slide-image" alt="">
+                            <div class="ff-restaurant__slide-logo-container">
+                                <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/restaurants/blanca-blue-logo.svg" class="ff-restaurant__slide-logo" alt="">
+                            </div>
+                        </article>
+                        <article class="ff-restaurant__slide swiper-slide">
+                            <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/restaurants/bocados-gbpv.webp" class="ff-restaurant__slide-image" alt="">
+                            <div class="ff-restaurant__slide-logo-container">
+                                <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/restaurants/bocados-logo.svg" class="ff-restaurant__slide-logo" alt="">
+                            </div>
+                        </article>
+                    </div>
+                    <div class="swiper-button-nav swiper-button-next"></div>
+                    <div class="swiper-button-nav swiper-button-prev"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                </div>
+            </section>
+
+            <section class="ff-events">
+                <h3 class="ff-text--primary ff-title--section">EVENTS</h3>
+
+                <div class="ff-vpcn-events__swiper ff-events__swiper swiper">
+                    <div class="ff-events__swiper-wrapper swiper-wrapper">
+                        <article class="ff-events__slide swiper-slide">
+                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
+                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
+
+                            <p class="ff-slide__text--accent">LOCATION:</p>
+                            <p class="ff-slide__text">Davino</p>
+                            <br>
+                            <p class="ff-slide__text--accent">SCHEDULE:</p>
+                            <p class="ff-slide__text">6:00pm - 11:00pm</p>
+                            <br>
+                            <p class="ff-slide__text--accent">COST:</p>
+                            <p class="ff-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
+                                Sommelier</p>
+                            <br>
+                        </article>
+                        <article class="ff-events__slide swiper-slide">
+                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
+                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
+
+                            <p class="ff-slide__text--accent">LOCATION:</p>
+                            <p class="ff-slide__text">Davino</p>
+                            <br>
+                            <p class="ff-slide__text--accent">SCHEDULE:</p>
+                            <p class="ff-slide__text">6:00pm - 11:00pm</p>
+                            <br>
+                            <p class="ff-slide__text--accent">COST:</p>
+                            <p class="ff-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
+                                Sommelier</p>
+                            <br>
+                        </article>
+                        <article class="ff-events__slide swiper-slide">
+                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
+                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
+
+                            <p class="ff-slide__text--accent">LOCATION:</p>
+                            <p class="ff-slide__text">Davino</p>
+                            <br>
+                            <p class="ff-slide__text--accent">SCHEDULE:</p>
+                            <p class="ff-slide__text">6:00pm - 11:00pm</p>
+                            <br>
+                            <p class="ff-slide__text--accent">COST:</p>
+                            <p class="ff-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
+                                Sommelier</p>
+                            <br>
+                        </article>
+                        <article class="ff-events__slide swiper-slide">
+                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
+                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
+
+                            <p class="ff-slide__text--accent">LOCATION:</p>
+                            <p class="ff-slide__text">Davino</p>
+                            <br>
+                            <p class="ff-slide__text--accent">SCHEDULE:</p>
+                            <p class="ff-slide__text">6:00pm - 11:00pm</p>
+                            <br>
+                            <p class="ff-slide__text--accent">COST:</p>
+                            <p class="ff-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
+                                Sommelier</p>
+                            <br>
+                        </article>
+                    </div>
+                    <!--                    <div class="swiper-pagination"></div>-->
+                </div>
+                <div class="ff-events-button-group">
+                    <button type="button" class="button hollow primary">DOWNLOAD PROGRAM</button>
+                    <button type="button" class="button primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+                            aria-controls="offcanvasExample">Reserve Your Experience
+                    </button>
+                </div>
+            </section>
+
+            <section class="ff-contact-cta">
+                <p class="ff-text--secondary ff-contact-cta__title">CONTACT INFORMATION</p>
+                <ul>
+                    <li><p class="ff-text--secondary ff-paragraph">diana.sandoval@villagroupcancun.com</p></li>
+                    <li><p class="ff-text--secondary ff-paragraph--accent">Reservations by phone:</p></li>
+                    <li><p class="ff-text--secondary ff-paragraph">+01 998 193 2600. Ext: 655</p></li>
+                </ul>
+            </section>
+
+
+
+            <section>
+                <h3 class="ff-text--primary ff-title--section">SPECIAL GUESTS</h3>
+                <div class="grid-x grid-margin-x align-center align-middle sponsors__container">
+                    <div class="cell small-6 medium-3 large-3 text-center align-self-middle sponsors__container-cell">
+                        <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/sponsors/jose-cuervo-sponsor-logo.png" alt="Logo 1" class="sponsor-logo">
+                    </div>
+                    <div class="cell small-6 medium-3 large-3 text-center align-self-middle sponsors__container-cell">
+                        <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/sponsors/casa-madero-sponsor-logo.png" alt="Logo 2" class="sponsor-logo">
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </section>
+
+
+
 
     <section id="group-3" class="ff-accordion__group">
         <div id="menu-3" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Garza Blanca Puerto Vallarta</h2></div>
@@ -240,6 +1280,7 @@
         </div>
     </section>
 
+
     <section id="group-4" class="ff-accordion__group">
         <div id="menu-4" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Garza Blanca Los Cabos</h2></div>
         <div class="ff-accordion__content">
@@ -248,6 +1289,7 @@
                 semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
         </div>
     </section>
+
 
     <section id="group-5" class="ff-accordion__group">
         <div id="menu-5" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Mousai Cancun</h2></div>
@@ -258,7 +1300,8 @@
         </div>
     </section>
 
-    <section id="group-6" class="ff-accordion__group">
+
+    <section id="group-6"  class="ff-accordion__group">
         <div id="menu-6" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Mousai Puerto Vallarta</h2></div>
         <div class="ff-accordion__content">
             <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
@@ -268,19 +1311,53 @@
     </section>
 
 
+</section>
+<!-- SECTION ACCORDION :: (end) -->
+
+
+
+
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>content</p>
+<p>POPUP Start</p>
+
+
+
+<!-- Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Villa del Palmar Cancun</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div id="hubspot-form-container"></div>
+    </div>
 </div>
 
 
+<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        hbspt.forms.create({
+            region: "na1",
+            portalId: "45061181",
+            formId: "21baca56-9260-4e2a-894b-c0e787892afb",
+            target: "#hubspot-form-container"
+        });
+    });
+</script>
 
-
-
-
-
-
-
-
-
-
+<p>POPUP End</p>
 <p>content</p>
 <p>content</p>
 <p>content</p>
@@ -290,24 +1367,15 @@
 <p>content</p>
 <p>content</p>
 <p>content</p>
-<br>
-
-<section class="ff-container">
-   CONTAINER
-</section>
-
-
-<br>
 <p>content</p>
 <p>content</p>
 <p>content</p>
 <p>content</p>
 <p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<br>
+<p>END</p>
+
+
+<!-- FESTIVAL OF FLAVOR :: (end) -->
 
 
 
@@ -315,11 +1383,14 @@
 
 
 
-<!--  <script type="module" src="/main.js"></script>-->
 
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <!-- GSAP -->
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
 <!-- Swiper -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -328,67 +1399,94 @@
 
 
 
-  <script type="text/javascript">
+<script type="text/javascript">
+    // This function reloads the page to address the issue with the srcset property.
+    // Without reloading, the hero image might not update correctly when resizing the viewport.
+    // window.addEventListener('resize', function() {
+    //     if (window.innerWidth <= 880) {
+    //         window.location.reload();
+    //     }
+    // });
+</script>
 
 
-      // Al hacer resize el contenido del accordion se oculta por el overflow
-      // Posible refrescar desde que se muestra el accordion
-
-      window.addEventListener('resize', function() {
-          if (window.innerWidth <= 880) {
-              window.location.reload();
-          }
-      });
+<!-- SECTION NAVBAR :: (start) -->
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        let BreakpointMobile = gsap.matchMedia();
 
 
-      if (document.querySelectorAll(".ff-hero__swiper .swiper-slide").length > 1) {
-          const swiper = new Swiper(".ff-hero__swiper", {
+        BreakpointMobile.add("(max-width: 879px)", () => {
+            let isNavMenuOpen = false;
+            const navbarButton = document.getElementById("navbarToggleButton");
+            const menuLinks = document.querySelectorAll(".ff-nav-item__link");
+            const accordionGroups = document.querySelectorAll(".ff-accordion__group");
+
+            gsap.set(".ff-navbar-nav", { autoAlpha: 0, yPercent: -8 });
+
+            let navbarTimeline = gsap.timeline({ paused: true });
+            navbarTimeline.to(".ff-navbar-nav", {
+                duration: 0.3,
+                autoAlpha: 1,
+                yPercent: 0,
+                ease: "power2.inOut",
+            });
+
+
+            navbarButton.addEventListener("click", () => {
+                toggleNavMenu();
+            });
+
+
+            menuLinks.forEach((link, index) => {
+                link.addEventListener("click", (e) => {
+                    e.preventDefault();
+
+                    if (isNavMenuOpen) {
+                        navbarTimeline.reverse();
+                        isNavMenuOpen = false;
+                    }
+
+                    toggleAccordion(accordionGroups[index], index);
+                });
+            });
+
+            function toggleNavMenu() {
+                if (!isNavMenuOpen) {
+                    navbarTimeline.play();
+                    isNavMenuOpen = true;
+                } else {
+                    navbarTimeline.reverse();
+                    isNavMenuOpen = false;
+                }
+            }
+        });
+
+
+        BreakpointMobile.add("(min-width: 880px)", () => {
+            gsap.set(".ff-navbar-nav", { autoAlpha: 1, yPercent: 0 });
+        });
+    });
+</script>
+<!-- SECTION NAVBAR :: (end) -->
+
+<!-- SECTION HERO :: (start) -->
+<script type="text/javascript">
+
+    if (document.querySelectorAll(".ff-hero__swiper .swiper-slide").length > 1) {
+        const swiper = new Swiper(".ff-hero__swiper", {
             createElements: true,
-            // effect: 'fade',
-            // coverflowEffect: {
-            //   rotate: 30,
-            //   slideShadows: false,
-            // },
+            effect: 'fade',
+            coverflowEffect: {
+                rotate: 30,
+                slideShadows: false,
+            },
             loop: true,
             slidesPerView: 1,
             spaceBetween: 0,
-            // pagination: false,
-            // navigation: false,
-            // draggable: false,
-            // autoplay: {
-              // delay: 2500,
-            // },
-            breakpoints: {
-              // 640: {
-              //     slidesPerView: 1.2,
-              //     spaceBetween: 16,
-              // }
-            }
-          });
-      }
-  </script>
-
-
-<!-- Events Sliders -->
-<script>
-
-    if (document.querySelectorAll(".ff-vpcn-events__swiper .swiper-slide").length > 1) {
-        const swiper = new Swiper(".ff-vpcn-events__swiper", {
-            createElements: true,
-            // effect: 'fade',
-            // coverflowEffect: {
-            //   rotate: 30,
-            //   slideShadows: false,
-            // },
-            loop: true,
-            slidesPerView: 3,
-            spaceBetween: 32,
-            // pagination: false,
-            // navigation: false,
-            // draggable: false,
-            // autoplay: {
-            // delay: 2500,
-            // },
+            autoplay: {
+                delay: 2500,
+            },
             breakpoints: {
                 // 640: {
                 //     slidesPerView: 1.2,
@@ -399,71 +1497,143 @@
     }
 
 </script>
+<!-- SECTION HERO :: (end) -->
 
 
 
+<!-- Restaurants Sliders -->
 <script type="text/javascript">
+    if (document.querySelectorAll(".ff-vpcn-restaurant__swiper .swiper-slide").length > 1) {
+        const swiper = new Swiper(".ff-vpcn-restaurant__swiper", {
+            createElements: true,
+            loop: true,
+            draggable: true,
+            slidesPerView: 1,
+            spaceBetween: 8,
+            centeredSlides: false,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3600,
+            },
+        });
+    }
+</script>
 
-    document.addEventListener("DOMContentLoaded", (event) => {
 
-        // Seleccionar todos los grupos y menús
-        let groups = [
-            document.querySelector("#group-1"),
-            document.querySelector("#group-2"),
-            document.querySelector("#group-3"),
-            document.querySelector("#group-4"),
-            document.querySelector("#group-5"),
-            document.querySelector("#group-6")
-        ];
 
-        let menus = [
-            document.querySelector("#menu-1"),
-            document.querySelector("#menu-2"),
-            document.querySelector("#menu-3"),
-            document.querySelector("#menu-4"),
-            document.querySelector("#menu-5"),
-            document.querySelector("#menu-6")
-        ];
+<!-- Events Sliders -->
+<script type="text/javascript">
+    if (document.querySelectorAll(".ff-vpcn-events__swiper .swiper-slide").length > 1) {
+        console.log("Swiper VPCN log!");
+        const swiper = new Swiper(".ff-vpcn-events__swiper", {
+            createElements: true,
+            loop: true,
+            draggable: true,
+            slidesPerView: 1,
+            spaceBetween: 4,
+            centeredSlides: false,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3600,
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 8
+                },
+                // when window width is >= 480px
+                480: {
+                    slidesPerView: 2,
+                    spaceBetween: 28
+                },
+                // when window width is >= 640px
+                879: {
+                    slidesPerView: 3,
+                    spaceBetween: 28
+                },
+                879: {
+                    slidesPerView: 3,
+                    spaceBetween: 32
+                }
+            }
+        });
+    }
+</script>
 
-        // Crear animaciones para cada grupo
-        let toggles = groups.map(group => createAnimation(group));
 
-        // Agregar evento click a cada menú
-        menus.forEach((menu, index) => {
-            menu.addEventListener("click", () => {
-                toggles.forEach((toggle, toggleIndex) => {
-                    toggle(menu === menus[toggleIndex] ? menu : null);
+<!-- ACCORDION ANIMATION -->
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", () => {
+        let mobileMatchMedia = gsap.matchMedia();
+
+        mobileMatchMedia.add("(max-width: 879px)", () => {
+            const groups = document.querySelectorAll(".ff-accordion__group");
+
+            let activeAccordion = null;
+            const timelines = [];
+
+            groups.forEach((group, index) => {
+                const content = group.querySelector(".ff-accordion__content");
+                const heading = group.querySelector(".ff-accordion__heading");
+
+                const tl = gsap.timeline({ paused: true })
+                    .to(content, { height: "auto", duration: 0.5, ease: "power1.inOut" })
+                    .from(content, { opacity: 0, duration: 0.3 }, "-=0.3");
+
+                timelines.push(tl);
+
+                if (index === 0) {
+                    tl.play();
+                    activeAccordion = group;
+                } else {
+                    gsap.set(content, { height: 0, overflow: "hidden" });
+                }
+
+                heading.addEventListener("click", () => {
+                    toggleAccordion(group, index);
+                });
+            });
+
+            function toggleAccordion(group, index) {
+                if (activeAccordion === group) {
+                    return;
+                }
+                if (activeAccordion) {
+                    const activeTimeline = timelines[Array.from(groups).indexOf(activeAccordion)];
+                    activeTimeline.reverse();
+                }
+
+                timelines[index].play();
+                activeAccordion = group;
+            }
+
+            // Función para abrir el acordeón al hacer clic desde el menú
+            document.querySelectorAll(".ff-nav-item__link").forEach((link, index) => {
+                link.addEventListener("click", () => {
+                    toggleAccordion(groups[index], index);
                 });
             });
         });
 
-        // Activar el primer elemento por defecto
-        toggles[0](menus[0]);  // Esto abre el primer menú (group-1) automáticamente
+        mobileMatchMedia.add("(min-width: 880px)", () => {
+            const contents = document.querySelectorAll(".ff-accordion__content");
 
-        // Función para crear la animación
-        function createAnimation(element) {
-            let menu = element.querySelector(".ff-accordion__heading");
-            let box = element.querySelector(".ff-accordion__content");
-
-            gsap.set(box, { height: "100%" });
-
-            let animation = gsap.from(box, {
-                height: 0,
-                duration: 0.5,
-                ease: "power1.inOut"
-            }).reverse();
-
-            return function(clickedMenu) {
-                if (clickedMenu === menu) {
-                    animation.reversed(!animation.reversed());
-                } else {
-                    animation.reverse();
-                }
-            };
-        }
-
+            contents.forEach(content => {
+                gsap.set(content, { height: "auto", overflow: "visible" });
+            });
+        });
     });
-
 </script>
 
 
