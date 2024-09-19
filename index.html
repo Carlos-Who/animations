@@ -26,6 +26,18 @@
         --ff-primary-color: #3498db;
         --ff-accent-color: #e74c3c;
         --ff-taffer-gold: #84754EFF;
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font: inherit;
+        }
     }
 </style>
 <!-- STYLES VARIABLES ~ (end) -->
@@ -901,490 +913,323 @@
 <!-- SECTION NAVBAR DESKTOP :: (end) -->
 
 
-<!-- SECTION HERO :: (start) -->
-<section class="ff-hero">
-    <div class="ff-hero__swiper swiper">
-        <div class="ff-hero__swiper-wrapper swiper-wrapper">
-            <div class="ff-hero__slide swiper-slide">
-                <img src="/public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-1.webp"
-                     srcset="/public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-mob-1.webp 900w,
-                         /public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-1.webp 2560w"
-                     sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"
-                     class="ff-hero__slide-image"
-                     alt="">
-            </div>
-            <div class="ff-hero__slide swiper-slide">
-                <img src="/public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-2.webp"
-                     srcset="/public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-mob-2.webp 900w,
-                         /public/festival-of-flavor-2024/demo/hero/festival-of-flavor-hero-2.webp 2560w"
-                     sizes="(max-width: 768px) 100vw, (min-width: 769px) 100vw"
-                     class="ff-hero__slide-image"
-                     alt="">
-            </div>
-        </div>
-    </div>
 
-    <div class="ff-hero__overlay-container">
-        <div class="ff-hero__content">
-            <h1 class="ff-text--primary ff-hero__title">
-                <span class="ff-hero__title--default">Festival</span>
-                <span class="ff-hero__title--default"><span class="ff-hero__title--accent">of</span>Flavors</span>
 
-            </h1>
-            <h2 class="ff-text--secondary ff-hero__subtitle">COCKTAIL NIGHTS, PAIRING DINNERS & MORE</h2>
-            <div class="ff-hero__date-badge">
-                <p class="ff-text--primary">Oct, 2024</p>
-            </div>
-        </div>
-    </div>
 
-    <div class="ff-hero__scroll-container">
-        <div class="ff-hero__scroll"></div>
-    </div>
+<!-- NEW VERSION V3 :: START -->
+
+<style>
+    .x-hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #c2d3d5;
+        width: 100%;
+        height: 60vh;
+        background-color: #8ea3a3;
+    }
+
+    .x-container {
+        background-color: salmon;
+    }
+
+
+    .x-accordion-item {
+        background-color: seagreen;
+    }
+    .x-accordion-content {
+        width: 90%;
+        max-width: 80rem;
+        margin: 0 auto;
+        background-color: royalblue;
+    }
+    .x-accordion-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.3em 1em;
+        border: 1px solid darkred;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .x-accordion-content {
+        overflow: hidden;
+    }
+    .toggle-icon {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+    }
+
+    @media (min-width: 880px) {
+        .x-accordion-title {
+            display: none;
+        }
+        .x-accordion-content {
+
+            background-color: sandybrown;
+        }
+        .x-accordion-content {
+            overflow: hidden;
+            height: auto !important;
+        }
+    }
+</style>
+
+
+
+
+
+<section class="x-hero">
+    <p>HERO</p>
 </section>
-<!-- SECTION HERO :: (end) -->
 
 
-<!-- SECTION INTRO :: (start) -->
-<section class="ff-container">
-    <h2 class="ff-text--primary ff-title--section">Festival of Flavors</h2>
-    <p class="ff-text--secondary ff-paragraph--section">Savor the moment this October at Tafer Resorts’ first-annual Festival of Flavor, an
-        extraordinary dining and mixology series that will be popping up at each of our resorts across Mexico. The
-        month-long festival is your ticket to embark on a culinary journey, where every dish and drink is crafted to
-        indulge the senses by world-class chefs and mixologists. From the rich tannins of Casa Madero wines paired with
-        succulent aged steaks to the smoky spice of Montelobos mezcal paired with gourmet chocolate, the festival will
-        showcase the very best of Mexico’s culinary heritage—as well as flavors from around the world.</p>
-    <p class="ff-text--secondary ff-paragraph--section">Each Festival of Flavor dinner is an invitation to discover something new. In
-        partnership with iconic global brands like Jose Cuervo, Patrón, and The Macallan, we’ve curated a mouth-watering
-        lineup of tasting experiences that pay tribute to the ways in which flavors can transport us. Whether it’s a
-        decadent mole or the best margarita you’ve ever had, every bite and sip you take at the Festival of Flavor tells
-        a story.</p>
+<section class="x-container">
+    <h2>Static section</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eligendi provident voluptate.
+        Adipisci asperiores distinctio est exercitationem ipsum nihil nobis odit officiis optio quidem,
+        reiciendis rem repudiandae sed ullam veritatis vitae voluptatem. Accusantium adipisci dignissimos
+        error est fuga laboriosam, laborum nostrum obcaecati perferendis quam quibusdam quidem rem soluta
+        suscipit voluptas? Accusantium aut commodi deleniti dolorem doloribus id illo ipsum laudantium
+        minima molestiae natus nihil nulla pariatur, quis repellendus sunt voluptate voluptatibus? Dolorum
+        mollitia rem soluta voluptate. Aspernatur beatae consequatur cum cumque dicta dolor dolorem eius enim
+        et expedita explicabo facere fuga illo iusto maxime nam natus neque obcaecati pariatur perferendis
+        erspiciatis porro quasi quia, quidem reprehenderit sapiente sint unde ut veritatis, voluptates.
+        A aut culpa, distinctio eaque earum, esse facilis fugit hic labore molestias nesciunt omnis optio porro
+        quasi quia quidem repellat sapiente sint vero voluptate? Consequatur eligendi enim sapiente sed vel.
+        Aut eos illum nisi non similique sit voluptatibus.</p>
 </section>
-<!-- SECTION INTRO :: (end) -->
 
 
-<!-- SECTION ACCORDION :: (start) -->
-<section class="ff-accordion">
-
-    <section id="group-1" class="ff-accordion__group" >
-        <div id="menu-1" class="ff-accordion__heading"><p class="ff-title--primary ff-title--accordion">Villa del Palmar Cancun</p></div>
-
-        <div class="ff-accordion__content">
-
-            <h2 id="vpcnSection" class="ff-text--primary ff-title" data-magellan-target="vpcnSection">Villa del Palmar Cancun</h2>
-
-            <div class="ff-content-grid ff-content-grid--left">
-
-                <div class="ff-content-grid__image-frame">
-                    <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/villa-del-palmar-cancun-hotel-cover.webp" class="ff-content-grid__image" alt="">
-                </div>
 
 
-                <div class="ff-content-grid__details">
-                    <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/villa-del-palmar-official-logo.svg" class="ff-details-content__brand-logo" alt="">
-                    <div class="ff-content-grid__details-info">
-                        <div class="ff-details-info-item">
-                            <img src="/lib/dist/img/festival-of-flavor-2024/icons/location-mark.svg" class="ff-details-info-icon" alt="">
-                            <p class="ff-text--secondary ff-details-info-label">Cancun</p>
-                        </div>
-                        <div class="ff-details-info-item">
-                            <img src="/lib/dist/img/festival-of-flavor-2024/icons/calendar.svg" class="ff-details-info-icon" alt="">
-                            <p class="ff-text--secondary ff-details-info-label">Oct 2024</p>
-                        </div>
-                    </div>
+<section class="x-container">
 
-                    <div class="ff-content-grid__details-content">
-                        <p class="ff-details-content__paragraph">Savor the best flavors Villa del Palmar has to offer
-                            this October at our Festival of Flavor, an extraordinary dining and mixology series that
-                            will be popping up at Davino and Zamá. </p>
-                        <p class="ff-details-content__paragraph">This month-long festival is your ticket to embark on a
-                            truly unique culinary journey, where every dish and drink is crafted to indulge the senses
-                            by world-class chefs and mixologists — from the rich tannins of Casa Madero wines paired
-                            with succulent aged steaks, to the smoky spice of Montelobos mezcal paired with gourmet
-                            chocolate, the festival will showcase the very best of Mexico’s culinary heritage, as well
-                            as flavors from around the world. </p>
+    <ul class="x-accordion">
 
-                        <div class="ff-details-content__actions">
-                            <a href="#" type="button" class="button hollow primary small">Events</a>
-                            <button type="button" class="button primary">Book Now</button>
-                        </div>
-                    </div>
-                </div>
+        <li class="x-accordion-item">
+            <a href="#garza-blanca-cancun" class="x-accordion-title">Garza Blanca Cancun <span class="toggle-icon">+</span></a>
+            <div class="x-accordion-content">
+                <h2>1. Garza Blanca Cancun</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt facilis illum nisi numquam! Accusamus ad assumenda, cumque
+                    deleniti esse fuga id illum ipsum itaque, modi nulla numquam perferendis quam quidem quis repudiandae tempore vero! Architecto beatae illum
+                    inventore quasi ut veritatis. Ab ad, animi aperiam asperiores aut beatae blanditiis distinctio dolorem ducimus ea earum enim eos et eum
+                    fugiat fugit illo illum iste iusto laborum modi non officiis pariatur perspiciatis placeat qui recusandae repellat, sed sint sit temporibus
+                    ullam ut voluptas? Assumenda blanditiis ducimus eveniet explicabo fugiat illo illum labore libero quaerat quam, quas qui, recusandae sit
+                    vitae voluptas voluptate voluptates. Accusantium aspernatur autem consectetur doloremque et fuga hic, ipsam labore necessitatibus nemo quas,
+                    rem repellat repellendus sequi velit veritatis vitae? Accusantium aperiam atque beatae consectetur dolore doloremque earum eos error facilis
+                    fugit illo incidunt iusto laborum molestiae obcaecati optio placeat quae quasi quisquam quo rem repellendus, saepe sapiente sequi similique
+                    sint sunt tenetur veritatis voluptates voluptatibus. Aliquam aspernatur corporis cum dolor dolorem doloribus dolorum enim eos, eum illum
+                    inventore iusto magnam maxime minima neque odio officiis omnis perferendis quos ratione rem repellendus rerum sed totam unde veritatis
+                    vitae? Accusamus consectetur dolore eum porro recusandae, reprehenderit repudiandae vel. Accusamus aliquid blanditiis delectus eum facere,
+                    maiores placeat quo sed tempora voluptatem. Commodi consequuntur culpa cum deleniti dicta earum esse et eum fugiat fugit illum incidunt
+                    ipsum, laborum magni maxime minima molestias neque nesciunt odio officia perferendis porro praesentium qui quia quibusdam quos saepe
+                    sapiente similique tempore temporibus vel veniam voluptatem voluptates! Adipisci, animi aspernatur at commodi consequatur doloremque earum
+                    enim et excepturi exercitationem, expedita fugiat hic id ipsam libero, magni minima mollitia necessitatibus nihil nobis numquam officiis
+                    quia quidem ratione ut. Aspernatur commodi corporis dignissimos distinctio est fugiat harum impedit maxime molestias quae quia sunt, velit,
+                    vero! Alias aperiam cum delectus dolor eaque in modi numquam placeat quas quo reprehenderit, saepe sit totam. Amet ea ipsum maxime nemo
+                    perspiciatis tempore, temporibus unde. Adipisci consequuntur doloribus, fugit incidunt itaque magnam tempora tempore? Ab dignissimos error
+                    exercitationem ipsam nam nostrum officiis vero voluptatem? Adipisci alias amet at blanditiis deserunt dicta distinctio dolorem, doloremque
+                    dolores et excepturi fuga harum hic ipsum iusto magnam magni maxime molestias natus necessitatibus nobis non optio pariatur perspiciatis
+                    placeat quae quam quibusdam quis quisquam recusandae rem saepe, sit tempora temporibus tenetur, veritatis vero. Animi asperiores at
+                    blanditiis consequatur cupiditate debitis delectus deserunt doloremque dolores dolorum eos error est hic impedit in, incidunt, itaque
+                    laudantium libero molestiae necessitatibus odit officia possimus quas quis rem sed soluta vitae? Eos ipsa itaque iusto quasi soluta? Aut
+                    consequatur ipsum libero natus placeat? Cum dicta est fuga tempora voluptates. Corporis debitis earum eligendi eos error et ex
+                    exercitationem facilis fugiat id illum in laborum nam non odio odit, quam quibusdam rerum saepe sequi similique soluta tempore tenetur, ut
+                    velit veniam voluptatem voluptatum! Accusantium aperiam aspernatur aut, blanditiis culpa, distinctio dolor eligendi, error et eum explicabo
+                    ipsum iste labore omnis praesentium quaerat quibusdam quos repellat saepe sit temporibus veniam voluptatum. Ab ad adipisci aliquam
+                    blanditiis corporis culpa deleniti deserunt dicta dignissimos dolorem dolorum, eligendi explicabo fuga fugiat hic inventore ipsum laboriosam
+                    maiores minus, molestiae nam natus nemo neque nisi non pariatur perferendis quidem recusandae rerum saepe sed sint vel voluptas voluptate
+                    voluptatem, voluptatibus voluptatum? Asperiores eaque error est eum molestiae, optio, perferendis quaerat qui quia quibusdam similique ut,
+                    velit voluptatem? Asperiores consectetur dolor ducimus ea illo labore recusandae temporibus! Libero minus placeat rem. Adipisci architecto
+                    atque consectetur cum deleniti dolorum impedit possimus praesentium repellat saepe. Accusamus accusantium ad adipisci aliquam aliquid amet
+                    consectetur consequatur cupiditate dolore doloremque doloribus dolorum eligendi id itaque iure libero magni modi nulla officia perferendis
+                    quas quod, quos reiciendis rem, repellendus saepe tempora temporibus ullam voluptatibus voluptatum. A, aperiam architecto beatae consectetur
+                    corporis deleniti ducimus ipsam iusto maxime, nam nobis odio odit omnis perspiciatis possimus quae qui quidem quisquam tenetur, voluptates!
+                    A adipisci aliquam at blanditiis consectetur culpa cupiditate, deserunt dignissimos distinctio ducimus eos error, et excepturi
+                    exercitationem fuga incidunt laborum mollitia nemo nisi non nostrum, odio officiis perferendis praesentium quam quis repellendus repudiandae
+                    sint tempore tenetur totam ullam veniam voluptates? A atque dicta esse ex expedita, explicabo fugit harum impedit ipsa maiores minima minus
+                    molestias mollitia nulla odit officia officiis perferendis quam repellat similique ut velit voluptates. A amet assumenda beatae blanditiis
+                    commodi delectus distinctio enim eos error et eum fuga, fugiat hic iusto magni molestiae nihil nulla obcaecati, odio officia quaerat quam
+                    quis ratione repudiandae sed tenetur totam. Accusantium deleniti dolores, fuga ipsa libero molestias nobis officia qui quidem quo
+                    repudiandae vitae? Adipisci at atque corporis, culpa cupiditate dicta dolor dolore, ea eligendi, est excepturi id illum incidunt iusto modi
+                    numquam praesentium quae qui quidem reiciendis sunt ut voluptas voluptatum! Accusantium, consectetur deleniti eligendi fugit maxime non
+                    nostrum provident quidem quos reiciendis, rerum, sunt? Facere iste quam sint. Accusantium ad aliquid amet aperiam at autem cum distinctio
+                    error eveniet expedita facere fugit harum illo, impedit laboriosam nisi numquam obcaecati odio odit pariatur placeat praesentium quidem
+                    ratione rem repellendus sunt, temporibus totam vitae voluptates, voluptatum! Accusamus, assumenda delectus dicta dolore ea excepturi iste
+                    iusto possimus quia quibusdam recusandae, repudiandae tenetur? Aliquam animi asperiores beatae blanditiis commodi consectetur corporis
+                    cumque debitis deleniti dolor earum error eveniet excepturi exercitationem facere facilis in incidunt inventore ipsa iusto libero magnam
+                    maiores, maxime minus molestiae molestias natus nemo perspiciatis porro provident quibusdam, quisquam quos repellendus temporibus tenetur
+                    unde veniam. Facere nostrum placeat rerum. Autem et facere impedit iste labore nemo optio placeat temporibus. Adipisci animi asperiores
+                    blanditiis corporis delectus ea excepturi hic id illum ipsam labore magni, maxime minima molestiae nihil odio pariatur quas rem repudiandae
+                    sit vel veniam vero voluptas. Aliquam expedita nam nostrum quae quisquam. Consequuntur, fuga labore nesciunt nisi numquam repudiandae.
+                    Aliquid dolore incidunt magnam natus possimus quaerat recusandae reprehenderit! Ad animi aut, blanditiis doloremque hic in magnam molestias,
+                    neque odio officia quisquam quos reiciendis repellat reprehenderit repudiandae saepe ut veniam vitae voluptatem voluptatum. Beatae debitis
+                    distinctio dolorum eligendi ex expedita libero sunt veritatis! Aliquam error minima quas, quidem quos rem.</p>
+                <p>End :: Garza Blanca Cancun</p>
             </div>
+        </li>
 
-            <section class="ff-restaurant">
-                <h3 class="ff-text--primary ff-title--section">RESTAURANTS PARTICIPATING</h3>
-                <div class="ff-vpcn-restaurant__swiper ff-restaurant__swiper swiper">
-                    <div class="ff-restaurant__swiper-wrapper swiper-wrapper">
-                        <article class="ff-restaurant__slide swiper-slide">
-                            <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/restaurants/davino-vpcn.webp" class="ff-restaurant__slide-image" alt="">
-                            <div class="ff-restaurant__slide-logo-container">
-                                <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/restaurants/davino-logo.svg" class="ff-restaurant__slide-logo" alt="">
-                            </div>
-                        </article>
-                        <article class="ff-restaurant__slide swiper-slide">
-                            <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/restaurants/zama-vpcn.webp" class="ff-restaurant__slide-image" alt="">
-                            <div class="ff-restaurant__slide-logo-container">
-                                <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/restaurants/zama-logo.svg" class="ff-restaurant__slide-logo" alt="">
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-button-nav swiper-button-next"></div>
-                    <div class="swiper-button-nav swiper-button-prev"></div>
-                    <!-- <div class="swiper-pagination"></div> -->
-                </div>
-            </section>
-
-            <section class="ff-events">
-                <h3 class="ff-text--primary ff-title--section">EVENTS</h3>
-
-                <div class="ff-vpcn-events__swiper ff-events__swiper swiper">
-                    <div class="ff-events__swiper-wrapper swiper-wrapper">
-<!--                        <?php if (isset($events['VPCN'])) : ?>-->
-<!--                        <?php foreach ($events['VPCN'] as $ffEvent) : ?>-->
-<!--                        <article class="ff-events__slide swiper-slide">-->
-<!--                            <p class="ff-text&#45;&#45;primary ff-slide__date"><?= $ffEvent['date'][$lang] ?></p>-->
-<!--                            <h3 class="ff-text&#45;&#45;primary ff-slide__title"><?= $ffEvent['title'][$lang] ?></h3>-->
-
-<!--                            <p class="ff-slide__text&#45;&#45;accent">LOCATION:</p>-->
-<!--                            <p class="ff-slide__text"><?= $ffEvent['location'] ?></p>-->
-<!--                            <br>-->
-<!--                            <p class="ff-slide__text&#45;&#45;accent">SCHEDULE:</p>-->
-<!--                            <p class="ff-slide__text"><?= $ffEvent['schedule'][$lang] ?></p>-->
-<!--                            <br>-->
-<!--                            <p class="ff-slide__text&#45;&#45;accent">COST:</p>-->
-<!--                            <p class="ff-slide__text"><?= $ffEvent['cost'][$lang] ?></p>-->
-<!--                            <br>-->
-<!--                        </article>-->
-<!--                        <?php endforeach; ?>-->
-<!--                        <?php endif; ?>-->
-                    </div>
-                    <!--                    <div class="swiper-pagination"></div>-->
-                </div>
-                <div class="ff-events-button-group">
-                    <button type="button" class="button hollow primary">DOWNLOAD PROGRAM</button>
-                    <button type="button" class="button primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                            aria-controls="offcanvasExample">Reserve Your Experience
-                    </button>
-                </div>
-            </section>
-
-            <section class="ff-contact-cta">
-                <p class="ff-text--secondary ff-contact-cta__title">CONTACT INFORMATION</p>
-                <ul>
-                    <li><p class="ff-text--secondary ff-paragraph">diana.sandoval@villagroupcancun.com</p></li>
-                    <li><p class="ff-text--secondary ff-paragraph--accent">Reservations by phone:</p></li>
-                    <li><p class="ff-text--secondary ff-paragraph">+01 998 193 2600. Ext: 655</p></li>
-                </ul>
-            </section>
-
-
-
-            <section>
-                <h3 class="ff-text--primary ff-title--section">SPECIAL GUESTS</h3>
-                <div class="grid-x grid-margin-x align-center align-middle sponsors__container">
-                    <div class="cell small-6 medium-3 large-3 text-center align-self-middle sponsors__container-cell">
-                        <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/sponsors/jose-cuervo-sponsor-logo.png" alt="Logo 1" class="sponsor-logo">
-                    </div>
-                    <div class="cell small-6 medium-3 large-3 text-center align-self-middle sponsors__container-cell">
-                        <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/sponsors/casa-madero-sponsor-logo.png" alt="Logo 2" class="sponsor-logo">
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </section>
-
-
-
-
-    <section id="group-2" class="ff-accordion__group" >
-        <div id="menu-2" class="ff-accordion__heading"><p class="ff-title--primary ff-title--accordion">Garza Blanca Puerto Vallarta</p></div>
-
-        <div class="ff-accordion__content">
-
-            <h2 id="gbpvSection" class="ff-text--primary ff-title--right" data-magellan-target="gbpvSection">Garza Blanca Puerto Vallarta</h2>
-
-            <div class="ff-content-grid ff-content-grid--right">
-
-                <div class="ff-content-grid__image-frame">
-                    <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/garza-blanca-puerto-vallarta-cover.webp" class="ff-content-grid__image" alt="">
-                </div>
-
-
-                <div class="ff-content-grid__details">
-                    <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/villa-del-palmar-official-logo.svg" class="ff-details-content__brand-logo" alt="">
-                    <div class="ff-content-grid__details-info">
-                        <div class="ff-details-info-item">
-                            <img src="/lib/dist/img/festival-of-flavor-2024/icons/location-mark.svg" class="ff-details-info-icon" alt="">
-                            <p class="ff-text--secondary ff-details-info-label">Puerto Vallarta</p>
-                        </div>
-                        <div class="ff-details-info-item">
-                            <img src="/lib/dist/img/festival-of-flavor-2024/icons/calendar.svg" class="ff-details-info-icon" alt="">
-                            <p class="ff-text--secondary ff-details-info-label">Oct 2024</p>
-                        </div>
-                    </div>
-
-                    <div class="ff-content-grid__details-content">
-                        <p class="ff-details-content__paragraph">Vibrant, bold and sophisticated sensations await you
-                            this October at our annual Festival of Flavor — hosted on Garza Blanca Puerto Vallarta and
-                            its celebrated restaurants, Blanca Blue and Bocados. </p>
-                        <p class="ff-details-content__paragraph">Embark on this once-in-a-lifetime culinary journey
-                            where every dish, pairing and invited guest was catered to make only the most extraordinary
-                            flavors this country has to offer. Created alongside iconic brands such as Tequila Trujillo,
-                            Taberna 3 Gallos, Vinoteca, Viparmex and Wine Studio, there is no other event in the world
-                            as mouth-watering as this. </p>
-
-                        <div class="ff-details-content__actions">
-                            <a href="#" type="button" class="button hollow primary small">Events</a>
-                            <button type="button" class="button primary">Book Now</button>
-                        </div>
-                    </div>
-                </div>
+        <li class="x-accordion-item">
+            <a href="#villa-palmar-cancun" class="x-accordion-title">Villa del Palmar Cancun <span class="toggle-icon">+</span></a>
+            <div class="x-accordion-content">
+                <h2>2. Villa del Palmar Cancun</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt facilis illum nisi numquam! Accusamus ad assumenda, cumque
+                    deleniti esse fuga id illum ipsum itaque, modi nulla numquam perferendis quam quidem quis repudiandae tempore vero! Architecto beatae illum
+                    inventore quasi ut veritatis. Ab ad, animi aperiam asperiores aut beatae blanditiis distinctio dolorem ducimus ea earum enim eos et eum
+                    fugiat fugit illo illum iste iusto laborum modi non officiis pariatur perspiciatis placeat qui recusandae repellat, sed sint sit temporibus
+                    ullam ut voluptas? Assumenda blanditiis ducimus eveniet explicabo fugiat illo illum labore libero quaerat quam, quas qui, recusandae sit
+                    vitae voluptas voluptate voluptates. Accusantium aspernatur autem consectetur doloremque et fuga hic, ipsam labore necessitatibus nemo quas,
+                    rem repellat repellendus sequi velit veritatis vitae? Accusantium aperiam atque beatae consectetur dolore doloremque earum eos error facilis
+                    fugit illo incidunt iusto laborum molestiae obcaecati optio placeat quae quasi quisquam quo rem repellendus, saepe sapiente sequi similique
+                    sint sunt tenetur veritatis voluptates voluptatibus. Aliquam aspernatur corporis cum dolor dolorem doloribus dolorum enim eos, eum illum
+                    inventore iusto magnam maxime minima neque odio officiis omnis perferendis quos ratione rem repellendus rerum sed totam unde veritatis
+                    vitae? Accusamus consectetur dolore eum porro recusandae, reprehenderit repudiandae vel. Accusamus aliquid blanditiis delectus eum facere,
+                    maiores placeat quo sed tempora voluptatem. Commodi consequuntur culpa cum deleniti dicta earum esse et eum fugiat fugit illum incidunt
+                    ipsum, laborum magni maxime minima molestias neque nesciunt odio officia perferendis porro praesentium qui quia quibusdam quos saepe
+                    sapiente similique tempore temporibus vel veniam voluptatem voluptates! Adipisci, animi aspernatur at commodi consequatur doloremque earum
+                    enim et excepturi exercitationem, expedita fugiat hic id ipsam libero, magni minima mollitia necessitatibus nihil nobis numquam officiis
+                    quia quidem ratione ut. Aspernatur commodi corporis dignissimos distinctio est fugiat harum impedit maxime molestias quae quia sunt, velit,
+                    vero! Alias aperiam cum delectus dolor eaque in modi numquam placeat quas quo reprehenderit, saepe sit totam. Amet ea ipsum maxime nemo
+                    perspiciatis tempore, temporibus unde. Adipisci consequuntur doloribus, fugit incidunt itaque magnam tempora tempore? Ab dignissimos error
+                    exercitationem ipsam nam nostrum officiis vero voluptatem? Adipisci alias amet at blanditiis deserunt dicta distinctio dolorem, doloremque
+                    dolores et excepturi fuga harum hic ipsum iusto magnam magni maxime molestias natus necessitatibus nobis non optio pariatur perspiciatis
+                    placeat quae quam quibusdam quis quisquam recusandae rem saepe, sit tempora temporibus tenetur, veritatis vero. Animi asperiores at
+                    blanditiis consequatur cupiditate debitis delectus deserunt doloremque dolores dolorum eos error est hic impedit in, incidunt, itaque
+                    laudantium libero molestiae necessitatibus odit officia possimus quas quis rem sed soluta vitae? Eos ipsa itaque iusto quasi soluta? Aut
+                    consequatur ipsum libero natus placeat? Cum dicta est fuga tempora voluptates. Corporis debitis earum eligendi eos error et ex
+                    exercitationem facilis fugiat id illum in laborum nam non odio odit, quam quibusdam rerum saepe sequi similique soluta tempore tenetur, ut
+                    velit veniam voluptatem voluptatum! Accusantium aperiam aspernatur aut, blanditiis culpa, distinctio dolor eligendi, error et eum explicabo
+                    ipsum iste labore omnis praesentium quaerat quibusdam quos repellat saepe sit temporibus veniam voluptatum. Ab ad adipisci aliquam
+                    blanditiis corporis culpa deleniti deserunt dicta dignissimos dolorem dolorum, eligendi explicabo fuga fugiat hic inventore ipsum laboriosam
+                    maiores minus, molestiae nam natus nemo neque nisi non pariatur perferendis quidem recusandae rerum saepe sed sint vel voluptas voluptate
+                    voluptatem, voluptatibus voluptatum? Asperiores eaque error est eum molestiae, optio, perferendis quaerat qui quia quibusdam similique ut,
+                    velit voluptatem? Asperiores consectetur dolor ducimus ea illo labore recusandae temporibus! Libero minus placeat rem. Adipisci architecto
+                    atque consectetur cum deleniti dolorum impedit possimus praesentium repellat saepe. Accusamus accusantium ad adipisci aliquam aliquid amet
+                    consectetur consequatur cupiditate dolore doloremque doloribus dolorum eligendi id itaque iure libero magni modi nulla officia perferendis
+                    quas quod, quos reiciendis rem, repellendus saepe tempora temporibus ullam voluptatibus voluptatum. A, aperiam architecto beatae consectetur
+                    corporis deleniti ducimus ipsam iusto maxime, nam nobis odio odit omnis perspiciatis possimus quae qui quidem quisquam tenetur, voluptates!
+                    A adipisci aliquam at blanditiis consectetur culpa cupiditate, deserunt dignissimos distinctio ducimus eos error, et excepturi
+                    exercitationem fuga incidunt laborum mollitia nemo nisi non nostrum, odio officiis perferendis praesentium quam quis repellendus repudiandae
+                    sint tempore tenetur totam ullam veniam voluptates? A atque dicta esse ex expedita, explicabo fugit harum impedit ipsa maiores minima minus
+                    molestias mollitia nulla odit officia officiis perferendis quam repellat similique ut velit voluptates. A amet assumenda beatae blanditiis
+                    commodi delectus distinctio enim eos error et eum fuga, fugiat hic iusto magni molestiae nihil nulla obcaecati, odio officia quaerat quam
+                    quis ratione repudiandae sed tenetur totam. Accusantium deleniti dolores, fuga ipsa libero molestias nobis officia qui quidem quo
+                    repudiandae vitae? Adipisci at atque corporis, culpa cupiditate dicta dolor dolore, ea eligendi, est excepturi id illum incidunt iusto modi
+                    numquam praesentium quae qui quidem reiciendis sunt ut voluptas voluptatum! Accusantium, consectetur deleniti eligendi fugit maxime non
+                    nostrum provident quidem quos reiciendis, rerum, sunt? Facere iste quam sint. Accusantium ad aliquid amet aperiam at autem cum distinctio
+                    error eveniet expedita facere fugit harum illo, impedit laboriosam nisi numquam obcaecati odio odit pariatur placeat praesentium quidem
+                    ratione rem repellendus sunt, temporibus totam vitae voluptates, voluptatum! Accusamus, assumenda delectus dicta dolore ea excepturi iste
+                    iusto possimus quia quibusdam recusandae, repudiandae tenetur? Aliquam animi asperiores beatae blanditiis commodi consectetur corporis
+                    cumque debitis deleniti dolor earum error eveniet excepturi exercitationem facere facilis in incidunt inventore ipsa iusto libero magnam
+                    maiores, maxime minus molestiae molestias natus nemo perspiciatis porro provident quibusdam, quisquam quos repellendus temporibus tenetur
+                    unde veniam. Facere nostrum placeat rerum. Autem et facere impedit iste labore nemo optio placeat temporibus. Adipisci animi asperiores
+                    blanditiis corporis delectus ea excepturi hic id illum ipsam labore magni, maxime minima molestiae nihil odio pariatur quas rem repudiandae
+                    sit vel veniam vero voluptas. Aliquam expedita nam nostrum quae quisquam. Consequuntur, fuga labore nesciunt nisi numquam repudiandae.
+                    Aliquid dolore incidunt magnam natus possimus quaerat recusandae reprehenderit! Ad animi aut, blanditiis doloremque hic in magnam molestias,
+                    neque odio officia quisquam quos reiciendis repellat reprehenderit repudiandae saepe ut veniam vitae voluptatem voluptatum. Beatae debitis
+                    distinctio dolorum eligendi ex expedita libero sunt veritatis! Aliquam error minima quas, quidem quos rem.</p>
+                <p>End :: Villa del Palmar Cancun</p>
             </div>
+        </li>
 
-            <section class="ff-restaurant">
-                <h3 class="ff-text--primary ff-title--section">RESTAURANTS PARTICIPATING</h3>
-                <div class="ff-vpcn-restaurant__swiper ff-restaurant__swiper swiper">
-                    <div class="ff-restaurant__swiper-wrapper swiper-wrapper">
-                        <article class="ff-restaurant__slide swiper-slide">
-                            <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/restaurants/blanca-blue-gbpv.webp" class="ff-restaurant__slide-image" alt="">
-                            <div class="ff-restaurant__slide-logo-container">
-                                <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/restaurants/blanca-blue-logo.svg" class="ff-restaurant__slide-logo" alt="">
-                            </div>
-                        </article>
-                        <article class="ff-restaurant__slide swiper-slide">
-                            <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/restaurants/bocados-gbpv.webp" class="ff-restaurant__slide-image" alt="">
-                            <div class="ff-restaurant__slide-logo-container">
-                                <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/gbpv/restaurants/bocados-logo.svg" class="ff-restaurant__slide-logo" alt="">
-                            </div>
-                        </article>
-                    </div>
-                    <div class="swiper-button-nav swiper-button-next"></div>
-                    <div class="swiper-button-nav swiper-button-prev"></div>
-                    <!-- <div class="swiper-pagination"></div> -->
+        <li class="x-accordion-item">
+            <a href="#hotel-mousai" class="x-accordion-title">Hotel Mousai <span class="toggle-icon">+</span></a>
+            <div class="x-accordion-content" >
+                <div style="border: 1px solid springgreen; margin-bottom: 2rem;"> <!-- div interno permite utilizar espaciados sin afectar el item cerrado
+                (prueba OK) -->
+                    <h2>3. Hotel Mousai</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deserunt facilis illum nisi numquam! Accusamus ad assumenda, cumque
+                        deleniti esse fuga id illum ipsum itaque, modi nulla numquam perferendis quam quidem quis repudiandae tempore vero! Architecto beatae illum
+                        inventore quasi ut veritatis. Ab ad, animi aperiam asperiores aut beatae blanditiis distinctio dolorem ducimus ea earum enim eos et eum
+                        fugiat fugit illo illum iste iusto laborum modi non officiis pariatur perspiciatis placeat qui recusandae repellat, sed sint sit temporibus
+                        ullam ut voluptas? Assumenda blanditiis ducimus eveniet explicabo fugiat illo illum labore libero quaerat quam, quas qui, recusandae sit
+                        vitae voluptas voluptate voluptates. Accusantium aspernatur autem consectetur doloremque et fuga hic, ipsam labore necessitatibus nemo quas,
+                        rem repellat repellendus sequi velit veritatis vitae? Accusantium aperiam atque beatae consectetur dolore doloremque earum eos error facilis
+                        fugit illo incidunt iusto laborum molestiae obcaecati optio placeat quae quasi quisquam quo rem repellendus, saepe sapiente sequi similique
+                        sint sunt tenetur veritatis voluptates voluptatibus. Aliquam aspernatur corporis cum dolor dolorem doloribus dolorum enim eos, eum illum
+                        inventore iusto magnam maxime minima neque odio officiis omnis perferendis quos ratione rem repellendus rerum sed totam unde veritatis
+                        vitae? Accusamus consectetur dolore eum porro recusandae, reprehenderit repudiandae vel. Accusamus aliquid blanditiis delectus eum facere,
+                        maiores placeat quo sed tempora voluptatem. Commodi consequuntur culpa cum deleniti dicta earum esse et eum fugiat fugit illum incidunt
+                        ipsum, laborum magni maxime minima molestias neque nesciunt odio officia perferendis porro praesentium qui quia quibusdam quos saepe
+                        sapiente similique tempore temporibus vel veniam voluptatem voluptates! Adipisci, animi aspernatur at commodi consequatur doloremque earum
+                        enim et excepturi exercitationem, expedita fugiat hic id ipsam libero, magni minima mollitia necessitatibus nihil nobis numquam officiis
+                        quia quidem ratione ut. Aspernatur commodi corporis dignissimos distinctio est fugiat harum impedit maxime molestias quae quia sunt, velit,
+                        vero! Alias aperiam cum delectus dolor eaque in modi numquam placeat quas quo reprehenderit, saepe sit totam. Amet ea ipsum maxime nemo
+                        perspiciatis tempore, temporibus unde. Adipisci consequuntur doloribus, fugit incidunt itaque magnam tempora tempore? Ab dignissimos error
+                        exercitationem ipsam nam nostrum officiis vero voluptatem? Adipisci alias amet at blanditiis deserunt dicta distinctio dolorem, doloremque
+                        dolores et excepturi fuga harum hic ipsum iusto magnam magni maxime molestias natus necessitatibus nobis non optio pariatur perspiciatis
+                        placeat quae quam quibusdam quis quisquam recusandae rem saepe, sit tempora temporibus tenetur, veritatis vero. Animi asperiores at
+                        blanditiis consequatur cupiditate debitis delectus deserunt doloremque dolores dolorum eos error est hic impedit in, incidunt, itaque
+                        laudantium libero molestiae necessitatibus odit officia possimus quas quis rem sed soluta vitae? Eos ipsa itaque iusto quasi soluta? Aut
+                        consequatur ipsum libero natus placeat? Cum dicta est fuga tempora voluptates. Corporis debitis earum eligendi eos error et ex
+                        exercitationem facilis fugiat id illum in laborum nam non odio odit, quam quibusdam rerum saepe sequi similique soluta tempore tenetur, ut
+                        velit veniam voluptatem voluptatum! Accusantium aperiam aspernatur aut, blanditiis culpa, distinctio dolor eligendi, error et eum explicabo
+                        ipsum iste labore omnis praesentium quaerat quibusdam quos repellat saepe sit temporibus veniam voluptatum. Ab ad adipisci aliquam
+                        blanditiis corporis culpa deleniti deserunt dicta dignissimos dolorem dolorum, eligendi explicabo fuga fugiat hic inventore ipsum laboriosam
+                        maiores minus, molestiae nam natus nemo neque nisi non pariatur perferendis quidem recusandae rerum saepe sed sint vel voluptas voluptate
+                        voluptatem, voluptatibus voluptatum? Asperiores eaque error est eum molestiae, optio, perferendis quaerat qui quia quibusdam similique ut,
+                        velit voluptatem? Asperiores consectetur dolor ducimus ea illo labore recusandae temporibus! Libero minus placeat rem. Adipisci architecto
+                        atque consectetur cum deleniti dolorum impedit possimus praesentium repellat saepe. Accusamus accusantium ad adipisci aliquam aliquid amet
+                        consectetur consequatur cupiditate dolore doloremque doloribus dolorum eligendi id itaque iure libero magni modi nulla officia perferendis
+                        quas quod, quos reiciendis rem, repellendus saepe tempora temporibus ullam voluptatibus voluptatum. A, aperiam architecto beatae consectetur
+                        corporis deleniti ducimus ipsam iusto maxime, nam nobis odio odit omnis perspiciatis possimus quae qui quidem quisquam tenetur, voluptates!
+                        A adipisci aliquam at blanditiis consectetur culpa cupiditate, deserunt dignissimos distinctio ducimus eos error, et excepturi
+                        exercitationem fuga incidunt laborum mollitia nemo nisi non nostrum, odio officiis perferendis praesentium quam quis repellendus repudiandae
+                        sint tempore tenetur totam ullam veniam voluptates? A atque dicta esse ex expedita, explicabo fugit harum impedit ipsa maiores minima minus
+                        molestias mollitia nulla odit officia officiis perferendis quam repellat similique ut velit voluptates. A amet assumenda beatae blanditiis
+                        commodi delectus distinctio enim eos error et eum fuga, fugiat hic iusto magni molestiae nihil nulla obcaecati, odio officia quaerat quam
+                        quis ratione repudiandae sed tenetur totam. Accusantium deleniti dolores, fuga ipsa libero molestias nobis officia qui quidem quo
+                        repudiandae vitae? Adipisci at atque corporis, culpa cupiditate dicta dolor dolore, ea eligendi, est excepturi id illum incidunt iusto modi
+                        numquam praesentium quae qui quidem reiciendis sunt ut voluptas voluptatum! Accusantium, consectetur deleniti eligendi fugit maxime non
+                        nostrum provident quidem quos reiciendis, rerum, sunt? Facere iste quam sint. Accusantium ad aliquid amet aperiam at autem cum distinctio
+                        error eveniet expedita facere fugit harum illo, impedit laboriosam nisi numquam obcaecati odio odit pariatur placeat praesentium quidem
+                        ratione rem repellendus sunt, temporibus totam vitae voluptates, voluptatum! Accusamus, assumenda delectus dicta dolore ea excepturi iste
+                        iusto possimus quia quibusdam recusandae, repudiandae tenetur? Aliquam animi asperiores beatae blanditiis commodi consectetur corporis
+                        cumque debitis deleniti dolor earum error eveniet excepturi exercitationem facere facilis in incidunt inventore ipsa iusto libero magnam
+                        maiores, maxime minus molestiae molestias natus nemo perspiciatis porro provident quibusdam, quisquam quos repellendus temporibus tenetur
+                        unde veniam. Facere nostrum placeat rerum. Autem et facere impedit iste labore nemo optio placeat temporibus. Adipisci animi asperiores
+                        blanditiis corporis delectus ea excepturi hic id illum ipsam labore magni, maxime minima molestiae nihil odio pariatur quas rem repudiandae
+                        sit vel veniam vero voluptas. Aliquam expedita nam nostrum quae quisquam. Consequuntur, fuga labore nesciunt nisi numquam repudiandae.
+                        Aliquid dolore incidunt magnam natus possimus quaerat recusandae reprehenderit! Ad animi aut, blanditiis doloremque hic in magnam molestias,
+                        neque odio officia quisquam quos reiciendis repellat reprehenderit repudiandae saepe ut veniam vitae voluptatem voluptatum. Beatae debitis
+                        distinctio dolorum eligendi ex expedita libero sunt veritatis! Aliquam error minima quas, quidem quos rem.</p>
+                    <p>End :: Hotel Mousai</p>
                 </div>
-            </section>
 
-            <section class="ff-events">
-                <h3 class="ff-text--primary ff-title--section">EVENTS</h3>
+            </div>
+        </li>
 
-                <div class="ff-vpcn-events__swiper ff-events__swiper swiper">
-                    <div class="ff-events__swiper-wrapper swiper-wrapper">
-                        <article class="ff-events__slide swiper-slide">
-                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
-                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
-
-                            <p class="ff-slide__text--accent">LOCATION:</p>
-                            <p class="ff-slide__text">Davino</p>
-                            <br>
-                            <p class="ff-slide__text--accent">SCHEDULE:</p>
-                            <p class="ff-slide__text">6:00pm - 11:00pm</p>
-                            <br>
-                            <p class="ff-slide__text--accent">COST:</p>
-                            <p class="ff-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
-                                Sommelier</p>
-                            <br>
-                        </article>
-                        <article class="ff-events__slide swiper-slide">
-                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
-                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
-
-                            <p class="ff-slide__text--accent">LOCATION:</p>
-                            <p class="ff-slide__text">Davino</p>
-                            <br>
-                            <p class="ff-slide__text--accent">SCHEDULE:</p>
-                            <p class="ff-slide__text">6:00pm - 11:00pm</p>
-                            <br>
-                            <p class="ff-slide__text--accent">COST:</p>
-                            <p class="ff-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
-                                Sommelier</p>
-                            <br>
-                        </article>
-                        <article class="ff-events__slide swiper-slide">
-                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
-                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
-
-                            <p class="ff-slide__text--accent">LOCATION:</p>
-                            <p class="ff-slide__text">Davino</p>
-                            <br>
-                            <p class="ff-slide__text--accent">SCHEDULE:</p>
-                            <p class="ff-slide__text">6:00pm - 11:00pm</p>
-                            <br>
-                            <p class="ff-slide__text--accent">COST:</p>
-                            <p class="ff-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
-                                Sommelier</p>
-                            <br>
-                        </article>
-                        <article class="ff-events__slide swiper-slide">
-                            <p class="ff-text--primary ff-slide__date">Oct 4th 20024</p>
-                            <h3 class="ff-text--primary ff-slide__title">COCKTAIL NIGHT +PAIRING DINNER</h3>
-
-                            <p class="ff-slide__text--accent">LOCATION:</p>
-                            <p class="ff-slide__text">Davino</p>
-                            <br>
-                            <p class="ff-slide__text--accent">SCHEDULE:</p>
-                            <p class="ff-slide__text">6:00pm - 11:00pm</p>
-                            <br>
-                            <p class="ff-slide__text--accent">COST:</p>
-                            <p class="ff-slide__text">$175 USD Cocktail + Pairing Dinner Price per Couple*airing Dinner. Guest
-                                Sommelier</p>
-                            <br>
-                        </article>
-                    </div>
-                    <!--                    <div class="swiper-pagination"></div>-->
-                </div>
-                <div class="ff-events-button-group">
-                    <button type="button" class="button hollow primary">DOWNLOAD PROGRAM</button>
-                    <button type="button" class="button primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-                            aria-controls="offcanvasExample">Reserve Your Experience
-                    </button>
-                </div>
-            </section>
-
-            <section class="ff-contact-cta">
-                <p class="ff-text--secondary ff-contact-cta__title">CONTACT INFORMATION</p>
-                <ul>
-                    <li><p class="ff-text--secondary ff-paragraph">diana.sandoval@villagroupcancun.com</p></li>
-                    <li><p class="ff-text--secondary ff-paragraph--accent">Reservations by phone:</p></li>
-                    <li><p class="ff-text--secondary ff-paragraph">+01 998 193 2600. Ext: 655</p></li>
-                </ul>
-            </section>
-
-
-
-            <section>
-                <h3 class="ff-text--primary ff-title--section">SPECIAL GUESTS</h3>
-                <div class="grid-x grid-margin-x align-center align-middle sponsors__container">
-                    <div class="cell small-6 medium-3 large-3 text-center align-self-middle sponsors__container-cell">
-                        <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/sponsors/jose-cuervo-sponsor-logo.png" alt="Logo 1" class="sponsor-logo">
-                    </div>
-                    <div class="cell small-6 medium-3 large-3 text-center align-self-middle sponsors__container-cell">
-                        <img src="/lib/dist/img/festival-of-flavor-2024/hotels-and-resorts/vpcn/sponsors/casa-madero-sponsor-logo.png" alt="Logo 2" class="sponsor-logo">
-                    </div>
-                </div>
-            </section>
-
-        </div>
-    </section>
-
-
-
-
-    <section id="group-3" class="ff-accordion__group">
-        <div id="menu-3" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Garza Blanca Puerto Vallarta</h2></div>
-        <div class="ff-accordion__content">
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        </div>
-    </section>
-
-
-    <section id="group-4" class="ff-accordion__group">
-        <div id="menu-4" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Garza Blanca Los Cabos</h2></div>
-        <div class="ff-accordion__content">
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        </div>
-    </section>
-
-
-    <section id="group-5" class="ff-accordion__group">
-        <div id="menu-5" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Mousai Cancun</h2></div>
-        <div class="ff-accordion__content">
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        </div>
-    </section>
-
-
-    <section id="group-6"  class="ff-accordion__group">
-        <div id="menu-6" class="ff-accordion__heading"><h2 class="ff-title--primary ff-title--accordion">Mousai Puerto Vallarta</h2></div>
-        <div class="ff-accordion__content">
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
-                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        </div>
-    </section>
-
+    </ul>
 
 </section>
-<!-- SECTION ACCORDION :: (end) -->
+
+
+
+<section class="x-container">
+    <h2>Static section</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur eligendi provident voluptate.
+        Adipisci asperiores distinctio est exercitationem ipsum nihil nobis odit officiis optio quidem,
+        reiciendis rem repudiandae sed ullam veritatis vitae voluptatem. Accusantium adipisci dignissimos
+        error est fuga laboriosam, laborum nostrum obcaecati perferendis quam quibusdam quidem rem soluta
+        suscipit voluptas? Accusantium aut commodi deleniti dolorem doloribus id illo ipsum laudantium
+        minima molestiae natus nihil nulla pariatur, quis repellendus sunt voluptate voluptatibus? Dolorum
+        mollitia rem soluta voluptate. Aspernatur beatae consequatur cum cumque dicta dolor dolorem eius enim
+        et expedita explicabo facere fuga illo iusto maxime nam natus neque obcaecati pariatur perferendis
+        erspiciatis porro quasi quia, quidem reprehenderit sapiente sint unde ut veritatis, voluptates.
+        A aut culpa, distinctio eaque earum, esse facilis fugit hic labore molestias nesciunt omnis optio porro
+        quasi quia quidem repellat sapiente sint vero voluptate? Consequatur eligendi enim sapiente sed vel.
+        Aut eos illum nisi non similique sit voluptatibus.</p>
+</section>
 
 
 
 
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>POPUP Start</p>
 
-
-
-<!-- Offcanvas -->
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Villa del Palmar Cancun</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body">
-        <div id="hubspot-form-container"></div>
-    </div>
-</div>
 
 
 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        hbspt.forms.create({
-            region: "na1",
-            portalId: "45061181",
-            formId: "21baca56-9260-4e2a-894b-c0e787892afb",
-            target: "#hubspot-form-container"
-        });
-    });
-</script>
-
-<p>POPUP End</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>content</p>
-<p>END</p>
-
-
-<!-- FESTIVAL OF FLAVOR :: (end) -->
-
-
-
-
-
-
-
-
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -1396,18 +1241,77 @@
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
 
-
-
-
 <script type="text/javascript">
-    // This function reloads the page to address the issue with the srcset property.
-    // Without reloading, the hero image might not update correctly when resizing the viewport.
-    // window.addEventListener('resize', function() {
-    //     if (window.innerWidth <= 880) {
-    //         window.location.reload();
-    //     }
-    // });
+    document.addEventListener("DOMContentLoaded", () => {
+        let BreakpointAccordion = gsap.matchMedia();
+
+
+        const accordionContainer = document.querySelector('.x-accordion');
+
+        let accordionItems = gsap.utils.toArray(".x-accordion-item");
+
+        accordionItems.forEach((currentItem, index) => {
+            const title = currentItem.querySelector(".x-accordion-title");
+            const content = currentItem.querySelector(".x-accordion-content");
+            const toggleIcon = title.querySelector(".toggle-icon");
+
+            gsap.set(content, { height: 0, overflow: 'hidden' });
+
+            currentItem.timeline = gsap.timeline({ paused: true })
+                .to(content, { height: 'auto', duration: 0.5, ease: "power2.inOut" });
+
+            if (index === 0) {
+                currentItem.isExpanded = true;
+                currentItem.timeline.progress(1);
+                toggleIcon.textContent = "-";
+            } else {
+                currentItem.isExpanded = false;
+                currentItem.timeline.progress(0);
+                toggleIcon.textContent = "+";
+            }
+
+
+            title.addEventListener("click", () => {
+                if (currentItem.isExpanded) {
+                    return;
+                }
+
+                accordionItems.forEach((otherItem) => {
+                    if (otherItem.isExpanded && otherItem !== currentItem) {
+                        otherItem.timeline.reverse();
+                        otherItem.isExpanded = false;
+
+                        const otherTitle = otherItem.querySelector(".x-accordion-title");
+                        const otherToggleIcon = otherTitle.querySelector(".toggle-icon");
+                        otherToggleIcon.textContent = "+";
+                    }
+                });
+
+                currentItem.timeline.play();
+                currentItem.isExpanded = true;
+                toggleIcon.textContent = "-";
+                accordionContainer.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+
+        BreakpointAccordion.add("(max-width: 879px)", () => {
+            // ...
+        });
+    });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- SECTION NAVBAR :: (start) -->
@@ -1499,8 +1403,6 @@
 </script>
 <!-- SECTION HERO :: (end) -->
 
-
-
 <!-- Restaurants Sliders -->
 <script type="text/javascript">
     if (document.querySelectorAll(".ff-vpcn-restaurant__swiper .swiper-slide").length > 1) {
@@ -1525,8 +1427,6 @@
         });
     }
 </script>
-
-
 
 <!-- Events Sliders -->
 <script type="text/javascript">
@@ -1570,7 +1470,6 @@
         });
     }
 </script>
-
 
 <!-- ACCORDION ANIMATION -->
 <script type="text/javascript">
@@ -1635,6 +1534,8 @@
         });
     });
 </script>
+
+
 
 
 
